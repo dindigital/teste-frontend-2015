@@ -33,3 +33,5 @@ Não é necessário montar todas as páginas e nem a home completa. O importante
 
 # Boa sorte
 ## Muito obrigado pelo interesse em participar
+
+![Home](https://raw.githubusercontent.com/dindigital/teste-frontend-2015/master/layouts/business-website-home-psd-template.jpg)
