@@ -1,0 +1,59 @@
+@import "../main";
+
+.latest-works
+{
+	width:100%;
+	max-width: 1000px;
+	margin: 20px auto;
+
+	.title-latest
+	{
+		width: 100%;
+		position: relative;
+		padding: 0 0 15px 0;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #ccc;
+	}
+	.title-latest .seta
+	{
+		@include sprite($icon-seta);
+		float: left;
+		margin-right: 20px;
+	}
+	.title-latest h2
+	{
+		line-height: 36px;
+		color: #000;
+		font-family: 'Arial';
+		@include font-size(15);
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	.title-latest .left
+	{
+		@include sprite($icon-left);
+		position: absolute;
+		right: 30px;
+		top: 50%;
+		transform: translateY(-50%); 
+		cursor: pointer;
+	}
+	.title-latest .right
+	{
+		@include sprite($icon-right);
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%); 
+		cursor: pointer;
+	}
+	.bx-pager-item
+	{
+		display: none;
+	}
+	.bx-prev , .bx-next
+	{
+		color: transparent;
+		line-height: 25px;
+	}
+}

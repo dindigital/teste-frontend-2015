@@ -1,0 +1,176 @@
+@import "../main";
+
+#header
+{
+	width:100%;
+	padding: 0;
+	margin:0;
+	background-color: #e8ebf1;
+
+	.container-header
+	{
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1000px;
+		padding:35px 0;
+		position: relative;
+	}
+	.logotipo
+	{
+		@include sprite($logotipo);
+		text-indent: -9999px;
+		@include font-size(0);
+		color: #ffffff;
+		margin-left: 15px;
+	}
+	.icon-menu
+	{
+		@include sprite($icon-list);
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		transform: translateY(-50%); 
+		cursor: pointer;
+	}
+	.menu-mobile
+	{
+		z-index: 9999;
+		position: absolute;
+		top: 0;
+		background-color: #e8ebf1;
+		padding: 50px;
+		display: none;
+		height: 100%;
+	}
+	.menu-mobile ul li
+	{
+		margin-bottom: 15px;
+	}
+	.menu-mobile ul li a 
+	{
+		text-decoration: none;
+		color: #000;
+		font-family: 'Arial';
+		@include font-size(13);
+		text-transform: uppercase;
+		font-weight: bold;
+		&:hover
+		{
+			color: #2aacc8;
+		}
+	}
+	.menu-hide
+	{
+		display: block;
+	}
+	.menu-desktop
+	{
+		display: none;
+	}
+}
+
+@media screen and (min-width: $desktop)
+{
+	#header
+	{
+		.menu-mobile , .icon-menu
+		{
+			display: none;
+		}
+		.logotipo
+		{
+			margin-left: 0;
+		}
+		.menu-desktop
+		{
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 55px;
+		}
+		.menu-desktop ul
+		{
+			margin-top: -15px;
+		}
+		.menu-desktop ul li 
+		{
+			display: inline-block;
+			margin-left: 56px;
+		}
+		.menu-desktop .link-menu
+		{
+			text-transform: uppercase;
+			color: #000;
+			font-family: 'Arial';
+			@include font-size(13);
+			font-weight: bold;
+			text-decoration: none;
+			&:hover
+			{
+				color: #2aacc8;
+			}
+		}
+
+		// MENU DROP DOWN
+
+		.drop-down
+		{
+			position: relative;
+			padding: 15px;
+			&:hover
+			{
+				border-top: 4px solid #2aacc8;
+				background-color: #fff;
+				padding: 11px 15px;
+			}
+		}
+		.drop-down:hover .drop-hidden
+		{
+			display: block;
+		}
+		.drop-hidden
+		{
+			z-index: 999;
+			display: none;
+			position: absolute;
+			width: 200px;
+			background-color: #fff;
+			padding: 20px 15px 0 15px;
+			top: 53px;
+			left: 0;
+			border-bottom: 4px solid #2aacc8;
+		}
+		.drop-hidden li 
+		{
+			margin-left: 0 !important;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			border-bottom: 1px solid #ccc;
+			width: 100%;
+		}
+		.drop-hidden li:last-child
+		{
+			border-bottom: 0px;
+		}
+		.drop-hidden li a 
+		{
+			text-transform: none;
+			color: #000;
+			font-family: 'Arial';
+			@include font-size(13);
+			font-weight: normal;
+			text-decoration: none;
+			&:hover
+			{
+				color: #2aacc8;
+			}
+		}
+		.arrow-down
+		{
+			@include sprite($arrow-down);
+			margin: 2px 0 0 5px;
+			padding: 0;
+			float: right;
+		}
+	}
+}

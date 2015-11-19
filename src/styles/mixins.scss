@@ -1,0 +1,27 @@
+@mixin font-size($sizeValue: 12 )
+{
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: ($sizeValue / 16) + rem;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin transform($value) {
+  -webkit-transform: translate3d(0, 0, 0) $value;
+  -moz-transform: translate3d(0, 0, 0) $value;
+  -ms-transform: translate3d(0, 0, 0) $value;
+  transform: translate3d(0, 0, 0) $value;
+}
+
+@mixin transition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  transition: $value;
+}

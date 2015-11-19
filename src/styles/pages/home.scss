@@ -1,0 +1,83 @@
+@import "../main";
+
+.content-home
+{
+	width: 100%;
+	padding: 0;
+	margin:0;
+	background-color: #e8ebf1;
+	border-bottom: 1px solid #d9d9d9;
+	padding: 15px;
+
+	.container-home
+	{
+		width: 100%;
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 58px 0;
+	}
+
+	.jobs-desc
+	{
+		margin-bottom: 20px;
+	}
+
+		.jobs-desc .icon-lapis
+	{
+		@include sprite($icon-lapis);
+		float: left;
+		margin-right: 10px;
+	}
+	.jobs-desc .icon-fly
+	{
+		@include sprite($icon-fly);
+		float: left;
+		margin-right: 10px;
+	}
+	.jobs-desc .icon-responsive
+	{
+		@include sprite($icon-responsive);
+		float: left;
+		margin-right: 10px;
+	}
+	.jobs-desc .icon-list
+	{
+		@include sprite($icon-list);
+		float: left;
+		margin-right: 10px;
+	}
+	.jobs-desc h2
+	{
+		color: #000;
+		font-family: 'Arial';
+		@include font-size(15);
+		text-transform: uppercase;
+		font-weight: bold;
+		line-height: 48px;
+	}
+	.jobs-desc p 
+	{
+		width: 100%;
+		color: #000;
+		font-family: 'Arial';
+		@include font-size(13);
+		margin: 20px 0;
+	}
+	.jobs-desc .read-more
+	{
+		@include sprite($arrow-read-more);
+		float: left;
+	}
+	.jobs-desc span a
+	{
+		color: #2aacc8;
+		font-family: 'Arial';
+		@include font-size(13);
+		text-decoration: none;
+	}
+}
+
+@media screen and (min-width: $tablet)
+{
+	
+}

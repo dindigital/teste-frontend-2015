@@ -1,0 +1,48 @@
+$arrow-down: -0px -0px 15px 13px;
+$arrow-read-more: -0px -13px 13px 15px;
+$icon-user: -0px -28px 32px 28px;
+$icon-right: -0px -56px 28px 28px;
+$icon-left: -0px -84px 28px 28px;
+$icon-coments: -0px -112px 32px 31px;
+$icon-seta: -0px -143px 22px 32px;
+$icon-preview: -0px -175px 43px 33px;
+$icon-link: -0px -208px 28px 34px;
+$logotipo: -0px -242px 156px 45px;
+$icon-lapis: -0px -287px 48px 48px;
+$icon-responsive: -0px -335px 48px 48px;
+$icon-fly: -0px -383px 48px 48px;
+$icon-list: -0px -431px 48px 48px;
+$icon-linkedin: -0px -479px 55px 54px;
+$icon-pinterest: -0px -533px 55px 54px;
+$icon-share: -0px -587px 55px 54px;
+$icon-skype: -0px -641px 55px 54px;
+$icon-dribbble: -0px -695px 55px 54px;
+$icon-facebook: -0px -749px 57px 57px;
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 3);
+}
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 4);
+}
+@function sprite-width($sprite) {
+  @return nth($sprite, 3);
+}
+@function sprite-height($sprite) {
+  @return nth($sprite, 4);
+}
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 1);
+  $sprite-offset-y: nth($sprite, 2);
+  background-position: $sprite-offset-x $sprite-offset-y;
+}
+@mixin sprite($sprite, $display: block) {
+  @include sprite-position($sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: $display;
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+.icon {
+  background-image: url('../images/sprite.png');
+}
