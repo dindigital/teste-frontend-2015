@@ -56,4 +56,38 @@
 		color: transparent;
 		line-height: 25px;
 	}
+	.preview
+	{
+		width: 100%;
+		height: 80px;
+		position: absolute;
+		bottom:0;
+		background-color: #2aacc8;
+		z-index: 9999;
+		text-align: center;
+		display: none;
+	}
+	.preview .icons-preview
+	{
+		width: 100%;
+		margin: 0;
+	}
+	.icon-preview
+	{
+		@include sprite($icon-preview);
+		top: 27%;
+		right: 50%;
+		position: absolute;
+	}
+	.icon-link
+	{
+		@include sprite($icon-link);
+		position: absolute;
+		top: 27%;
+		right: 35%;
+	}
+	.slider1 li:hover .preview
+	{
+		display: block;
+	}
 }
