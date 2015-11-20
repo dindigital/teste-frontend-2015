@@ -65,7 +65,9 @@
 		background-color: #2aacc8;
 		z-index: 9999;
 		text-align: center;
-		display: none;
+		visibility: hidden;
+		transition: visibility 0s, opacity 0.5s linear;
+		opacity: 0;
 	}
 	.preview .icons-preview
 	{
@@ -88,6 +90,7 @@
 	}
 	.slider1 li:hover .preview
 	{
-		display: block;
+		visibility: visible;
+		opacity: 1;
 	}
 }
