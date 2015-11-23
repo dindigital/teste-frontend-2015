@@ -7,7 +7,7 @@
 	margin:0;
 	background-color: #e8ebf1;
 	border-bottom: 1px solid #d9d9d9;
-	padding: 15px;
+	// padding: 15px;
 
 	.container-home
 	{
@@ -22,7 +22,7 @@
 		margin-bottom: 20px;
 	}
 
-		.jobs-desc .icon-lapis
+	.jobs-desc .icon-lapis
 	{
 		@include sprite($icon-lapis);
 		float: left;
@@ -75,9 +75,102 @@
 		@include font-size(13);
 		text-decoration: none;
 	}
+	.content-home-testimonials
+	{
+		background-color: #fff !important;
+		margin: 0;
+	}
+	.title-testimonials , .title-clients
+	{
+		position: relative;
+		padding: 0 10px;
+		margin-bottom: 20px;
+		// margin-top: -50px;
+	}
+	.icon-coments
+	{
+		@include sprite($icon-coments);
+		float: left;
+		margin-right: 20px;
+	}
+	.icon-clients
+	{
+		@include sprite($icon-user);
+		float: left;
+		margin-right: 20px;
+	}
+	.title-testimonials h2 , .title-clients h2
+	{
+		line-height: 36px;
+		color: #000;
+		font-family: 'Arial';
+		@include font-size(15);
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	.title-testimonials p , .title-testimonials small
+	{
+		width: 100%;
+		color: #000;
+		font-family: 'Arial';
+		@include font-size(13);
+		margin: 20px 0;
+		line-height: 20px;
+	}
+	.title-testimonials small em 
+	{
+		font-weight: bold;
+		font-style: italic;
+	}
+	.title-clients ul li
+	{
+		display: inline-block;
+		margin:0;
+		padding:0;
+		background-color: #efefef;
+		border: 1px solid #ccc;
+	}
+	.title-clients ul li img
+	{
+		height: 120px;
+		width: 100%;
+	}
+
+	.download-psd
+	{
+		width: 100%;
+		padding: 25px;
+		background-color: #e8fcfe;
+		border: 1px solid #81e4ed;
+		margin-bottom: 30px;
+	}
+	.download-psd p 
+	{
+		color: #000;
+		font-family: 'Arial';
+		@include font-size(13);
+		line-height: 20px;
+	}
+	.download-psd .button a img
+	{
+		display: block;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
 }
 
 @media screen and (min-width: $tablet)
 {
-	
+	.content-home 
+	{
+		padding:0;
+		.title-testimonials , .title-clients
+		{
+			margin-top: -50px;
+		}
+		.download-psd .button a img
+		{
+			margin-top: 0;
+		}
+	}
 }
