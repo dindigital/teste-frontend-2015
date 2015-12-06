@@ -3,17 +3,20 @@
 .slide-banner
 {
 	width:100%;
-	background-color:#81e4ed;
-	padding: 30px 0 1px 0;
-	margin:0;
+	background-color:#fff;
+	padding:0;
+	margin:0 !important;
 
 	.container-slide
 	{
 		margin: 0 auto;
 		width: 100%;
-		max-width: 1000px;
+		// max-width: 1000px;
 	}
-
+	.container-slide ul li 
+	{
+		border-top: 5px solid #d4983a;
+	}
 		/**
 	 * BxSlider v4.1.2 - Fully loaded, responsive content slider
 	 * http://bxslider.com
@@ -33,7 +36,7 @@
 	.bx-wrapper 
 	{
 		position: relative;
-		margin: 0 auto 60px;
+		margin: 0 auto;
 		padding: 0;
 		*zoom: 1;
 		width: 1000px !importante;
@@ -50,12 +53,12 @@
 
 	.bx-wrapper .bx-viewport 
 	{
-		-moz-box-shadow: 0 0 5px #ccc;
-		-webkit-box-shadow: 0 0 5px #ccc;
-		box-shadow: 0 0 5px #ccc;
-		border:  5px solid #fff;
-		left: -5px;
-		background: #fff;
+		// -moz-box-shadow: 0 0 5px #ccc;
+		// -webkit-box-shadow: 0 0 5px #ccc;
+		// box-shadow: 0 0 5px #ccc;
+		// border:  5px solid #fff;
+		// left: -5px;
+		// background: #fff;
 		
 		/*fix other elements on the page moving (on Chrome)*/
 		-webkit-transform: translatez(0);
@@ -69,7 +72,7 @@
 	.bx-wrapper .bx-controls-auto 
 	{
 		position: absolute;
-		bottom: -30px;
+		bottom: 2px;
 		width: 100%;
 	}
 
@@ -109,7 +112,8 @@
 
 	.bx-wrapper .bx-pager.bx-default-pager a 
 	{
-		background: #666;
+		// background: #666;
+		border: 1px solid #fff;
 		text-indent: -9999px;
 		display: block;
 		width: 10px;
@@ -129,17 +133,17 @@
 
 	/* DIRECTION CONTROLS (NEXT / PREV) */
 
-	.bx-wrapper .bx-prev 
-	{
-		left: 10px;
-		background: url(../images/controls.png) no-repeat 0 -32px;
-	}
+	// .bx-wrapper .bx-prev 
+	// {
+	// 	left: 10px;
+	// 	background: url(../images/controls.png) no-repeat 0 -32px;
+	// }
 
-	.bx-wrapper .bx-next 
-	{
-		right: 20px;
-		background: url(../images/controls.png) no-repeat -43px -32px;
-	}
+	// .bx-wrapper .bx-next 
+	// {
+	// 	right: 20px;
+	// 	background: url(../images/controls.png) no-repeat -43px -32px;
+	// }
 
 	.bx-wrapper .bx-prev:hover 
 	{

@@ -1,181 +1,125 @@
 @import "../main";
 
-.content-home
+#planta
 {
-	width: 100%;
-	padding: 0;
+	width:100%;
+	padding:0;
 	margin:0;
-	background-color: #e8ebf1;
-	border-bottom: 1px solid #d9d9d9;
-	// padding: 15px;
 
-	.container-home
+	.container-planta
 	{
-		width: 100%;
-		max-width: 1000px;
 		margin: 0 auto;
-		padding: 58px 0;
-	}
-
-	.jobs-desc
-	{
-		margin-bottom: 20px;
-	}
-
-	.jobs-desc .icon-lapis
-	{
-		@include sprite($icon-lapis);
-		float: left;
-		margin-right: 10px;
-	}
-	.jobs-desc .icon-fly
-	{
-		@include sprite($icon-fly);
-		float: left;
-		margin-right: 10px;
-	}
-	.jobs-desc .icon-responsive
-	{
-		@include sprite($icon-responsive);
-		float: left;
-		margin-right: 10px;
-	}
-	.jobs-desc .icon-list
-	{
-		@include sprite($icon-list);
-		float: left;
-		margin-right: 10px;
-	}
-	.jobs-desc h2
-	{
-		color: #000;
-		font-family: 'Arial';
-		@include font-size(15);
-		text-transform: uppercase;
-		font-weight: bold;
-		line-height: 48px;
-	}
-	.jobs-desc p 
-	{
 		width: 100%;
-		color: #000;
-		font-family: 'Arial';
-		@include font-size(13);
-		margin: 20px 0;
+		max-width: 1030px;
 	}
-	.jobs-desc .read-more
+	.container-planta div
 	{
-		@include sprite($arrow-read-more);
-		float: left;
-	}
-	.jobs-desc span a
-	{
-		color: #2aacc8;
-		font-family: 'Arial';
-		@include font-size(13);
-		text-decoration: none;
-	}
-	.content-home-testimonials
-	{
-		background-color: #fff !important;
-		margin: 0;
-	}
-	.title-testimonials , .title-clients
-	{
-		position: relative;
-		padding: 0 10px;
-		margin-bottom: 20px;
-		// margin-top: -50px;
-	}
-	.icon-coments
-	{
-		@include sprite($icon-coments);
-		float: left;
-		margin-right: 20px;
-	}
-	.icon-clients
-	{
-		@include sprite($icon-user);
-		float: left;
-		margin-right: 20px;
-	}
-	.title-testimonials h2 , .title-clients h2
-	{
-		line-height: 36px;
-		color: #000;
-		font-family: 'Arial';
-		@include font-size(15);
-		text-transform: uppercase;
-		font-weight: bold;
-	}
-	.title-testimonials p , .title-testimonials small
-	{
-		width: 100%;
-		color: #000;
-		font-family: 'Arial';
-		@include font-size(13);
-		margin: 20px 0;
-		line-height: 20px;
-	}
-	.title-testimonials small em 
-	{
-		font-weight: bold;
-		font-style: italic;
-	}
-	.title-clients ul li
-	{
-		display: inline-block;
-		margin:0;
-		padding:0;
-		background-color: #efefef;
-		border: 1px solid #ccc;
-		opacity: 1;
-		&:hover
-		{
-			opacity: 0.5;
-		}
-	}
-	.title-clients ul li img
-	{
-		height: 120px;
-		width: 100%;
-	}
-
-	.download-psd
-	{
-		width: 100%;
-		padding: 25px;
-		background-color: #e8fcfe;
-		border: 1px solid #81e4ed;
+		display: flex;
+   	align-items: center;
+   	text-align: center;
 		margin-bottom: 30px;
 	}
-	.download-psd p 
+	.container-planta span
 	{
-		color: #000;
-		font-family: 'Arial';
-		@include font-size(13);
-		line-height: 20px;
+		@include sprite($planta_img_header);
+		float: left;
+		padding: 0;
+		display: none;
 	}
-	.download-psd .button a img
+	.container-planta h2
 	{
+		@include font-size(36);
+		font-family:'gotham_ultraregular';
+		float: left;
+		color: #d4983a;
+		padding: 0;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+	}
+	.container-planta .planta-img
+	{
+		width: 100%;
+		max-width: 704px;
 		display: block;
+    margin: 0 auto;
+	}
+	.pavimento-img
+	{
+		width: 100%;
+	}
+	.container-planta h3
+	{
+		text-align: center;
+		@include font-size(24);
+		font-family:'gotham-medium';
+		color: #858585;
+		width: 100%;
+		padding: 0;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		margin-top: 35px;
+	}
+	.pav-tipo
+	{
+		margin-top: 0 !important;
+	}
+	.container-planta .beleza-conforto  
+	{
+		@include font-size(118);
+		font-family: 'dragon_is_comingregular';
+		color: #e14b50;
+		width: 100%;
+		text-align: center;
+		margin-top: 15px;
+		margin-bottom: 70px;
+	}
+	#localizacao
+	{
+		text-align: center;
+    width: 100%;
+    margin-bottom: 48px;
+	}
+	.mapa-img
+	{
+		width: 100%;
+		max-width: 779px;
 		margin: 0 auto;
-		margin-top: 20px;
+		display: block;
+	}
+	.endereco
+	{
+		@include font-size(18);
+		font-family:'gotham-medium';
+		color: #2c2c2c;
+		text-align: center;
+		margin: 25px 0;
+	}
+	.endereco strong
+	{
+		@include font-size(18);
+		font-family:'gotham_ultraregular';
+		color: #2c2c2c;
+	}
+	.comodidade-text
+	{
+		@include font-size(76);
+		font-family: 'dragon_is_comingregular';
+		color: #e14b50;
+		width: 100%;
+		text-align: center;
 	}
 }
-
 @media screen and (min-width: $tablet)
 {
-	.content-home 
+	#planta
 	{
-		padding:0;
-		.title-testimonials , .title-clients
+		.container-planta div
 		{
-			margin-top: -50px;
+			margin-bottom: 0;
 		}
-		.download-psd .button a img
+		.container-planta span
 		{
-			margin-top: 0;
+			display: block;
 		}
 	}
 }

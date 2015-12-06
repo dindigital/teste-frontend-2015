@@ -52,7 +52,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('vendors', function() {
-  return gulp.src('vendors/js/**/*.js')
+  return gulp.src('vendors/**/*.js')
   .pipe(concat('vendors.js'))
   .pipe(rename({suffix: '.min'}))
   .pipe(uglify())

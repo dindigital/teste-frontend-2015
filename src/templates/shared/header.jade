@@ -1,46 +1,54 @@
 header#header
-	.container-header
-		h1.logotipo.icon BisLite
-		span.icon.icon-menu
-		
-		nav.menu-desktop
-			ul
-				li
-					a.link-menu(href="#") home
-				li
-					a.link-menu(href="#") about us
-				li.drop-down
-					span.icon.arrow-down
-					a.link-menu(href="#") services
-					ul.drop-hidden
-						li
-							a(href="#") Web Design
-						li
-							a(href="#") Wordpress Design
-						li
-							a(href="#") Mobile App Devplopment
-						li
-							a(href="#") Internet Marketing
-						li
-							a(href="#") Social Media Management
-				li
-					a.link-menu(href="#") portfolio
-				li
-					a.link-menu(href="#") blog
-				li
-					a.link-menu(href="#") contact us
 
-	nav.menu-mobile
-			ul
-				li
-					a(href="#") home
-				li
-					a(href="#") about us
-				li
-					a(href="#") services
-				li
-					a(href="#") portfolio
-				li
-					a(href="#") blog
-				li
-					a(href="#") contact us
+	//- MENU MOBILE
+	.menu-mobile
+		ul#menu
+			li
+				a(href="#header")
+					| Home
+			li
+				a(href="#slide-foto")
+					| Fotos
+			li
+				a(href="#planta")
+					| Plantas
+			li
+				a(href="#localizacao")
+					| Localização
+			li
+				a(href="#reservas")
+					| Espelho de Reservas
+			li
+				a(href="#contato")
+					| Contato
+	//- END
+
+	.container-header.row
+		p.col-xs-12.col-sm-9.col-lg-9
+			strong 11 4509.0474<br>
+			| Visite o decorado: COOP - Av. Barão de Mauá, 1389
+		h1.logo.icon
+			| Residencial OMER
+
+		span.icon.icon-menu
+
+
+		ul#menu.menu.col-xs-12.col-sm-9.col-lg-9
+			li
+				a(href="#header")
+					| Home
+			li
+				a(href="#slide-foto")
+					| Fotos
+			li
+				a(href="#planta")
+					| Plantas
+			li
+				a(href="#localizacao")
+					| Localização
+			li
+				a(href="#reservas")
+					| Espelho de Reservas
+			li
+				a(href="#contato")
+					| Contato

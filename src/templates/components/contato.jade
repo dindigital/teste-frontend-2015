@@ -1,0 +1,35 @@
+section#contato.container-fluid
+	.container-contato
+		h2
+			| Contato
+		.auc.col-xs-12.col-sm-12.col-lg-7
+			span.icon.logo-auc
+
+			p
+				| 11 4509.0474 <br>
+				| www.<strong>aucconstrutora</strong>.com.br <br>
+				<br>
+				<br>
+				<br>
+				| Rua das Paineiras, 604 - Jardins - Santo André - SP <br>
+				| vendas@aucconstrutora.com.br <br>
+
+		.form-contato.col-xs-12.col-sm-12.col-lg-5
+			form.form-horizontal.row
+				fieldset.row
+					.legend.title-form.col-xs-12.col-sm-12.col-lg-12 Envie sua mensagem!
+					.form-group
+						.col-md-12
+							input#name.form-control.input-md(name='name', type='text', placeholder='nome', required='')
+
+					.form-group
+						.col-md-12
+							input#email.form-control.input-md(name='email', type='text', placeholder='e-mail', required='')
+
+					.form-group
+						.col-md-12
+							textarea#mensagem.form-control(name='mensagem',placeholder='mensagem...')
+
+					.form-group
+						.col-md-12
+							button#enviar.btn.btn-primary(name='enviar') enviar

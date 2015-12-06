@@ -1,77 +1,33 @@
-section.content-home.container-fluid
-	.container-home
-		.jobs-desc.col-xs-12.col-sm-3.col-md-3
-			span.icon.icon-lapis
-			h2 Clean Theme
-			p Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi. 
-			span.read-more.icon
-			span 
-				a(href="#") Read More
+section#planta.container-fluid
+	.container-planta
+		div.col-xs-12.col-sm-12.col-lg-12
+			span.icon.col-xs-12.col-sm-5.col-lg-5
+			h2.title-plantas.col-xs-12.col-sm-7.col-lg-7 
+				| Plantas
+		img.planta-img(src="assets/images/planta.jpg", alt="Plantas")
+		h3 
+			| planta tipo
+		img.pavimento-img(src="assets/images/pavimento.png", alt="Pavimento")
+		h3.pav-tipo
+			| Pavimento tipo
+		p.beleza-conforto 
+			| Beleza e conforto planejados em todos os espaços.
+		h2#localizacao localição
+		img.mapa-img(src="assets/images/localizacao.jpg", alt="Mapa")
 
-		.jobs-desc.col-xs-12.col-sm-3.col-md-3
-			span.icon.icon-responsive
-			h2 Responsive Design
-			p Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi. 
-			span.read-more.icon
-			span 
-				a(href="#") Read More
+		p.endereco
+			strong
+				| Endereço do Condomínio <br>
+			| Rua Jair Balo, 169 - Alto da Boa Vista – Mauá 
 
-		.jobs-desc.col-xs-12.col-sm-3.col-md-3
-			span.icon.icon-list
-			h2 Fully layerd PSD 
-			p Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi. 
-			span.read-more.icon
-			span 
-				a(href="#") Read More
-
-		.jobs-desc.col-xs-12.col-sm-3.col-md-3
-			span.icon.icon-fly
-			h2 Ready for coding
-			p Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi. 
-			span.read-more.icon
-			span 
-				a(href="#") Read More
+		p.comodidade-text
+			| Comodidade e conveniência fazem parte da sua localização.
 		
-include /components/latest-job
-	
-section.content-home.container-fluid
-	.content-home-testimonials.row
-		.container-home
-			.title-testimonials.col-xs-12.col-sm-6.col-md-6
-				span.icon.icon-coments
-				h2 TESTIMONIALS
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam harum ducimus, quos dolorum, molestias ad temporibus nesciunt at ipsum quod eos velit quaerat sapiente id consequuntur corrupti molestiae, quas culpa.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt maiores ut dolorem atque iure eius magnam harum excepturi pariatur perferendis, impedit deleniti eveniet aliquam vel voluptate reprehenderit soluta sunt adipisci.
-
-				small 
-					em Jhon Travis, CEO, DomainName.com
 		
-			.title-clients.col-xs-12.col-sm-6.col-md-6
-				span.icon.icon-clients
-				h2 OURS CLIENTS
-				ul
-					li.col-xs-4.col-sm-4.col-md-4
-						a(href="#")
-							img(src="assets/images/cliente01.jpg", alt="Clientes")
-					li.col-xs-4.col-sm-4.col-md-4
-						a(href="#")
-							img(src="assets/images/cliente02.jpg", alt="Clientes")
-					li.col-xs-4.col-sm-4.col-md-4
-						a(href="#")
-							img(src="assets/images/cliente03.jpg", alt="Clientes")
-					li.col-xs-4.col-sm-4.col-md-4
-						a(href="#")
-							img(src="assets/images/cliente04.jpg", alt="Clientes")
-					li.col-xs-4.col-sm-4.col-md-4
-						a(href="#")
-							img(src="assets/images/cliente05.jpg", alt="Clientes")
-					li.col-xs-4.col-sm-4.col-md-4
-						a(href="#")
-							img(src="assets/images/cliente06.jpg", alt="Clientes")
+	include /components/galeria
 
-			.download-psd.col-xs-12.col-sm-12.col-md-12
-				p.col-xs-12.col-sm-8.col-md-8  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure in odio voluptas animi quasi maiores tempora optio odit ipsam earum aliquid nostrum esse facilis provident quod, assumenda nisi inventore excepturi!
+	include /components/reservas
 
-				.button.col-xs-12.col-sm-4.col-md-4
-					a(href="#")
-						img(src="assets/images/button.png", alt="Download PSD")
+	include /components/contato
+
 

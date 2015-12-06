@@ -1,0 +1,138 @@
+@import "../main";
+
+#reservas
+{
+	width:100%;
+	padding:0;
+	margin:0;
+
+	.container-reservas
+	{
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1030px;
+	}
+	.container-reservas h3
+	{
+		text-align: center;
+		@include font-size(16);
+		font-family:'gotham_ultraregular';
+		width: 100%;
+		color: #e99a34;
+		padding: 0;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		margin-top: 35px;
+		margin-bottom: 75px;
+	}
+	.container-reservas h2
+	{
+		@include font-size(36);
+		font-family:'gotham_ultraregular';
+		color: #d4983a;
+		padding: 0;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.container-reservas h2.bloco
+	{
+		@include font-size(18);
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	.wrapper-predio
+	{
+    position: relative;
+	}
+	.wrapper-predio .predio
+	{
+		width: 100%;
+		border: 10px solid #d4983a;
+		border-radius: 10px;
+		max-width: 226px;
+		position: relative;
+    padding: 12px 12px 53px 12px;
+    margin: 0 auto;
+	}
+	.wrapper-predio .predio ul 
+	{
+		margin: 0 auto;
+		padding: 0;
+	}
+	.wrapper-predio .predio ul li 
+	{
+		display: inline-block;
+		background-color: #d4983a;
+		margin-bottom: 18px;
+		padding: 0;
+		width: 35px;
+		height: 15px;
+		text-align: center;
+		margin-right: 14px;
+    border-radius: 10px;
+    @include font-size(11);
+		font-family:'gotham_ultraregular';
+		color: #fff;
+    line-height: 15px;
+    letter-spacing: 1px;
+	}
+	.wrapper-predio .no-margin
+	{
+		margin-right:0 !important;
+	}
+	.wrapper-predio .predio span
+	{
+		width: 58px;
+		height: 46px;
+		border-right: 10px solid #d4983a;
+		border-top: 10px solid #d4983a;
+		border-left: 10px solid #d4983a;
+		border-radius: 10px;
+		position: absolute;
+		bottom: -8px;
+
+	}
+	.red
+	{
+		background-color: #e14b50 !important;
+	}
+	.green
+	{
+		background-color: #83c64c !important;
+	}
+	.legenda
+	{
+    margin-top: 43px;
+	}
+	.legenda ul 
+	{
+    width: 350px;
+    margin: 0 auto;
+	}
+	.legenda ul li 
+	{
+		@include font-size(16);
+		font-family:'gotham_ultraregular';
+		color: #959595;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		position: relative;
+		margin-bottom: 7px;
+	}
+	.legenda ul li p
+	{
+		margin-left: 60px;
+	}
+	.legenda ul li span
+	{
+		width: 45px;
+		height: 19px;
+		background-color: #d4983a;
+    position: absolute;
+    border-radius: 10px;
+    margin-right: 15px;
+	}
+}
