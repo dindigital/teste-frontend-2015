@@ -1,5 +1,5 @@
 # Teste - FrontEnd - 2015
-
+# A VAGA
 ### Conhecimentos
 - HTML/HTML5
 - CSS/CSS3
@@ -43,7 +43,6 @@ Rua Bernardino de Campos, 31, Santo André - Centro
 Ao lado da estação de trem e do terminal de ônibus
 
 # O TESTE
-
 ### O que deve ser feito ?
 Montagem de uma ou mais páginas do template (PSD) fornecido neste reposótio.
 Não é necessário montar todas as páginas. O objetivo é transmitir na montagem os conhecimentos informados como requisitos na descrição desta vaga
