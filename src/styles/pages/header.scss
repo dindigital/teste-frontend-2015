@@ -1,0 +1,169 @@
+@import "../main";
+
+#header
+{
+	width:100%;
+	padding: 0;
+	margin:0;
+	background-color: #fff;
+
+	.container-header
+	{
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1030px;
+		padding:20px;
+		position: relative;
+	}
+	.logo
+	{
+		@include sprite($logotipo_omer);
+		text-indent: -9999px;
+		@include font-size(0);
+		color: #ffffff;
+		margin: 0 auto;
+		padding:0;
+	}
+
+	// MENU MOBILE 
+
+	.icon-menu
+	{
+		@include sprite($menu-mobile);
+		position: absolute;
+		right: 20px;
+		top: 30px;
+		cursor: pointer;
+	}
+	.menu-mobile
+	{
+		padding: 20px;
+		height: 100%;
+		width: 65%;
+		background-color: #ccc;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 9999;
+		display: none;
+	}
+	.menu-mobile ul li 
+	{
+		margin-bottom: 15px;
+	}
+	.menu-mobile ul li a
+	{
+		letter-spacing: 1px;
+		text-decoration: none;
+		text-transform: uppercase;
+		@include font-size(13);
+		font-family:'gotham-medium';
+		color: #d4983a;
+		&:hover
+		{
+			font-family:'gotham_ultraregular';
+		}
+	}
+	.menu-hide
+	{
+		display: block;
+	}
+	// END - MENU MOBILE 
+
+	.container-header p 
+	{
+		white-space:pre;
+		text-align: center;
+		@include font-size(10);
+		font-family:'gotham-medium';
+		color: #d4983a;
+		line-height: 20px;
+		margin-bottom: 25px;
+		width: 100%;
+		padding:0;
+	}
+	.container-header p strong
+	{
+		@include font-size(16);
+		font-family:'gotham_ultraregular';
+	}
+	.container-header ul
+	{
+		text-align: right;
+		position: absolute;
+		bottom: 20px;
+		right: 0;
+		display: none;
+	}
+	.container-header ul li 
+	{
+		display: inline-block;
+		margin-left: 30px;
+	}
+	.container-header ul li a
+	{
+		letter-spacing: 1px;
+		text-decoration: none;
+		text-transform: uppercase;
+		@include font-size(13);
+		font-family:'gotham-medium';
+		color: #d4983a;
+		&:hover
+		{
+			font-family:'gotham_ultraregular';
+		}
+	}
+}
+
+@media screen and (min-width: $tablet)
+{
+	#header
+	{
+		.logo
+		{
+			margin: 0;
+		}
+		.container-header p 
+		{
+			@include font-size(16);
+			position: absolute;
+			text-align: right;
+			right: 20px;
+			top: 20px;
+		}
+		.container-header p strong
+		{
+			@include font-size(21);
+		}
+		.container-header ul
+		{
+			display: block;
+		}
+		.icon-menu
+		{
+			display: none;
+		}
+		.menu-mobile
+		{
+			display: none;
+		}
+		.container-header ul li
+		{
+			margin-left: 20px;
+		}
+		.container-header ul li a
+		{
+			@include font-size(10);
+		}
+	}
+}
+@media screen and (min-width: $desktop)
+{
+	#header
+	{
+		.container-header ul li a
+		{
+			@include font-size(13);
+		}
+	}
+}

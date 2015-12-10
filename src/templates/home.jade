@@ -1,0 +1,33 @@
+section#planta.container-fluid
+	.container-planta
+		div.col-xs-12.col-sm-12.col-lg-12
+			span.icon.col-xs-12.col-sm-5.col-lg-5
+			h2.title-plantas.col-xs-12.col-sm-7.col-lg-7 
+				| Plantas
+		img.planta-img(src="assets/images/planta.jpg", alt="Plantas")
+		h3 
+			| planta tipo
+		img.pavimento-img(src="assets/images/pavimento.png", alt="Pavimento")
+		h3.pav-tipo
+			| Pavimento tipo
+		p.beleza-conforto 
+			| Beleza e conforto planejados em todos os espaços.
+		h2#localizacao localição
+		img.mapa-img(src="assets/images/localizacao.jpg", alt="Mapa")
+
+		p.endereco
+			strong
+				| Endereço do Condomínio <br>
+			| Rua Jair Balo, 169 - Alto da Boa Vista – Mauá 
+
+		p.comodidade-text
+			| Comodidade e conveniência fazem parte da sua localização.
+		
+		
+	include /components/galeria
+
+	include /components/reservas
+
+	include /components/contato
+
+

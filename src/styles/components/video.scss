@@ -1,0 +1,81 @@
+@import "../main";
+
+#video
+{
+	width:100%;
+
+	.container-video
+	{
+		margin: 0 auto;
+		max-width: 1030px;
+		margin: 0 auto;
+		width: 100%;
+	}
+	.itens
+	{
+		line-height: 50px;
+		padding: 0 20px;
+	}
+	.itens span 
+	{
+		@include sprite($medida);
+		display: block;
+		padding: 0;
+		margin: 30px auto 0 auto;
+	}
+	.itens p
+	{
+		text-align: center;
+		display: block;
+		@include font-size(10);
+		font-family:'gotham-medium';
+		color: #959595;
+		text-transform: uppercase;
+		padding: 0;
+		letter-spacing: 0px;
+	}
+	.video
+	{
+		position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+	}
+	.video iframe,
+	.video object,
+	.video embed 
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+@media screen and (min-width: $desktop)
+{
+	#video
+	{
+		.itens
+		{
+			margin-bottom: 105px;
+			padding: 0 40px;
+		}
+		.itens p
+		{
+			float: left;
+			margin-top: 30px;
+			@include font-size(17);
+			letter-spacing: 2px;
+		}
+		.itens span 
+		{
+			float: left;
+		}
+		.video
+		{
+			margin-bottom: 195px;
+		}
+	}
+}

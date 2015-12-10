@@ -1,0 +1,99 @@
+@import "../main";
+
+#contato
+{
+	width:100%;
+	padding:0;
+	margin:0;
+
+	.container-contato
+	{
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1030px;
+	}
+	.container-contato h2
+	{
+		@include font-size(36);
+		font-family:'gotham_ultraregular';
+		color: #d4983a;
+		padding: 0;
+		width: 100%;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 80px;
+		margin-bottom: 80px;
+	}
+	.auc
+	{
+		padding:10px;
+	}
+	.logo-auc
+	{
+		@include sprite($auc_logotipo);
+		margin-bottom: 50px;
+	}
+	.auc p 
+	{
+		@include font-size(18);
+		font-family:'gotham-medium';
+		color: #3b3c3f;
+		line-height: 22px;
+	}
+	.auc p strong
+	{
+		font-family:'gotham_ultraregular';
+	}
+	.form-contato
+	{
+		padding: 10px;
+	}
+	fieldset
+	{
+		margin:0;
+	}
+	.form-horizontal
+	{
+		text-align: right;
+		margin:0;
+		padding: 10px;
+	}
+	.form-horizontal div 
+	{
+		padding: 0;
+	}
+	.title-form
+	{
+		color: #3b3c3f;
+		@include font-size(18);
+		font-family:'gotham-medium';
+		margin-bottom: 20px;
+	}
+	.form-horizontal input
+	{
+		width: 100%;
+		border: 2px solid #717176;
+		font-family:'gotham-medium';
+		color: #3b3c3f;
+		@include font-size(18);
+	}
+	.form-horizontal textarea
+	{
+		height: 165px;
+		border: 2px solid #717176;
+		font-family:'gotham-medium';
+		color: #3b3c3f;
+		@include font-size(18);
+	}
+	#enviar
+	{
+		color: #fff;
+		@include font-size(16);
+		font-family:'gotham-medium';
+		width: 66px;
+		height: 34px;
+		background-color: #717176;
+		border: none;
+	}
+}
