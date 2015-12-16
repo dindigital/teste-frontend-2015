@@ -1,0 +1,91 @@
+.box-card{
+	background-color: $color1;
+	padding: 60px 0 50px 0;
+	border-bottom: 1px solid $color9;
+}
+.card-texto{
+
+	h2{
+		position: relative;
+		padding-left: 60px;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		font-family: Arial;
+		font-size: 1em;
+		color: $color3;
+		font-weight: bold;
+	}
+	p{
+		font-family: Arial;
+		font-size: .9em;
+		color: $color10;
+	}
+
+	&:nth-child(1) h2{
+		
+		&:before{
+			content: url(../imagens/icone-clean.png);
+			position:absolute;
+			left:0px;
+			top: -15px;
+			background-color: $color4;
+			border-radius: 50%;
+		}
+	}
+	&:nth-child(2) h2{
+		
+		&:before{
+			content: url(../imagens/icone-responsive.png);
+			position:absolute;
+			left:0px;
+			top: -15px;
+			background-color: $color4;
+			border-radius: 50%;
+		}
+	}
+	&:nth-child(3) h2{
+		
+		&:before{
+			content: url(../imagens/icone-fully.png);
+			position:absolute;
+			left:0px;
+			top: -15px;
+			background-color: $color4;
+			border-radius: 50%;
+		}
+	}
+	&:nth-child(4) h2{
+		
+		&:before{
+			content: url(../imagens/icone-ready.png);
+			position:absolute;
+			left:0px;
+			top: -15px;
+			background-color: $color4;
+			border-radius: 50%;
+		}
+	}
+
+}
+.more{
+	
+	a{
+		font-family: Arial;
+		font-size: .9em;
+		color: $color4;
+		@include efeito-link;
+
+			&:before{
+				content: url(../imagens/icone-card.png);
+				padding-right: 9px;
+			}
+			&:hover{
+				text-decoration: none;
+				color: $color3;
+			}
+			&:focus{
+				text-decoration: none;
+				color: $color3;
+			}
+	}
+}

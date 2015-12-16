@@ -1,0 +1,98 @@
+header{
+	background-color: $color1;
+	border-bottom: 1px solid $color2;
+	padding: 30px 0 30px 0;
+	box-shadow: 0px 5px 10px #ccc;
+}
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+.navbar {
+    margin-bottom: 0px;
+}
+.navbar-nav {
+    float: right;
+}
+.nav > li > a {
+    padding: 10px 25px;
+}
+.navbar-default .navbar-nav > li > a {
+	text-transform: uppercase;
+	font-family: Arial;
+	font-size: 1em;
+    color: $color3;
+    font-weight: bold;
+	@include efeito-link;
+}
+.navbar-default .navbar-nav > li > a:hover {
+	background-color: $color5;
+	color: $color4;
+	border-top: 5px solid $color4;
+}
+.navbar-default .navbar-nav > li > a:focus {
+	background-color: $color5;
+	color: $color4;
+	border-top: 5px solid $color4;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+    color: $color4;
+    background-color: $color5;
+	border-top: 5px solid $color4;
+}
+.dropdown-menu {
+	padding:5px;
+	background-color: $color5;
+    background-clip: padding-box;
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 5px solid $color4;
+    box-shadow: 0px 0px 0px;    
+    text-align: left;
+	font-family: Arial;
+    font-size: 1em;
+    color: $color3;
+
+    	li{
+    		border-bottom: 1px solid $color6;
+
+    			&:last-child{
+    				border-bottom: 0px;
+    			}
+    	}
+}
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 30px;
+    color: $color3;
+    white-space: nowrap;
+}
+.dropdown-menu > li > a:hover {
+    color: $color4;
+    background-color: transparent;
+}
+.icone-menu {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-left: 2px;
+    background-image: url(../imagens/icone-menu.png);
+    background-repeat: no-repeat;
+}
+@media (min-width: 300px) and (max-width: 769px)  {
+    .navbar-nav  {
+        width: 100%; 
+    } 
+}
+@media (min-width: 770px) and (max-width: 981px){
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.nav > li > a {
+    padding: 10px 18px;
+}
+}

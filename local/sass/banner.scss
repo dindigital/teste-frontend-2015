@@ -1,0 +1,28 @@
+.box-banner{
+	background-color: $color7;
+	padding: 18px 0 40px 0;
+}
+.carousel-indicators {
+    bottom: -40px;
+}
+.carousel-indicators {
+
+		li{
+			mdisplay: inline-block;
+		    width: 15px;
+		    height: 15px;
+		    margin: 0px 9px 0 9px;
+		    text-indent: -999px;
+		    cursor: pointer;
+		    background-color: $color8;
+		    border: 0px;
+		    border-radius: 15px;		
+		}
+    
+    	.active{
+    		width: 15px;
+		    height: 15px;
+		    margin: 0px 9px 0 9px;
+		    background-color: $color5;
+    	}
+}

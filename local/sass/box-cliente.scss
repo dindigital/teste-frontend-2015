@@ -1,0 +1,25 @@
+.box-cliente{
+
+	h2{
+		margin-bottom: 23px;
+		text-transform: uppercase;
+		font-family: Arial;
+		font-size: 1.2em;
+		color: $color3;
+		font-weight: bold;
+
+			&:before{
+				content: url(../imagens/icone-cliente.jpg);
+				position: relative;
+				top:3px;
+				padding-right: 15px;
+			}
+	}
+	.img-cliente{
+		margin: 0px;
+		padding:0px;
+		display: inline-block;
+		border: 1px solid $color1;
+	}
+
+}
