@@ -1,0 +1,28 @@
+.box-testemunho{
+
+	h2{
+		margin-bottom: 23px;
+		text-transform: uppercase;
+		font-family: Arial;
+		font-size: 1.2em;
+		color: $color3;
+		font-weight: bold;
+
+			&:before{
+				content: url(../imagens/icone-testemunho.jpg);
+				position: relative;
+				top:7px;
+				padding-right: 15px;
+			}
+	}
+	p{
+		line-height: 24px;
+		font-family: Arial;
+		font-size: 1em;
+		color: $color10;
+	}
+	small{
+		color: $color10;
+	}
+
+}

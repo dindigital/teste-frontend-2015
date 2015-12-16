@@ -1,0 +1,56 @@
+.box-download{
+	margin-top: 40px;
+	background-color: $color12;
+	border: 1px solid $color7;
+	padding: 30px 30px;
+
+		p{
+			line-height: 26px;
+			font-family: Arial;
+			font-size: 1.1em;
+			color: $color10;
+		}
+
+		a{
+			padding: 15px 0 20px 70px;
+			border-radius: 5px;
+			border: 1px solid $color4;			
+			background: #81e4ed; /* Old browsers */
+			background: -moz-linear-gradient(top,  #81e4ed 0%, #72dae6 50%, #60cede 85%, #2aacc8 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #81e4ed 0%,#72dae6 50%,#60cede 85%,#2aacc8 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #81e4ed 0%,#72dae6 50%,#60cede 85%,#2aacc8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81e4ed', endColorstr='#2aacc8',GradientType=0 ); /* IE6-9 */
+			box-shadow: 2px 3px 5px #ccc;
+			text-transform: uppercase;
+			font-family: Arial;
+			font-size: 1.2em;
+			color: $color3;
+			font-weight: bold;
+
+				&:before{
+					content: url(../imagens/icone-download.png);
+					position: relative;
+					left: -30px;
+					top: 5px;
+				}
+				&:hover{
+					text-decoration: none;
+					background: #81e4ed; /* Old browsers */
+					background: -moz-linear-gradient(top,  #81e4ed 0%, #72dae6 50%, #60cede 100%, #2aacc8 100%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(top,  #81e4ed 0%,#72dae6 50%,#60cede 100%,#2aacc8 100%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(to bottom,  #81e4ed 0%,#72dae6 50%,#60cede 100%,#2aacc8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81e4ed', endColorstr='#2aacc8',GradientType=0 ); /* IE6-9 */
+
+				}
+				&:focus{
+					text-decoration: none;
+					background: #81e4ed; /* Old browsers */
+					background: -moz-linear-gradient(top,  #81e4ed 0%, #72dae6 50%, #60cede 100%, #2aacc8 100%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(top,  #81e4ed 0%,#72dae6 50%,#60cede 100%,#2aacc8 100%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(to bottom,  #81e4ed 0%,#72dae6 50%,#60cede 100%,#2aacc8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81e4ed', endColorstr='#2aacc8',GradientType=0 ); /* IE6-9 */
+
+				}
+
+		}
+}
