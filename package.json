@@ -1,0 +1,24 @@
+{
+  "name": "bislite",
+  "version": "1.0.0",
+  "description": "BisLite",
+  "main": "index.js",
+  "scripts": {
+    "test": "jshint dev/js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duduindo/teste-frontend-2015.git"
+  },
+  "author": "Eduardo (duduindo)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duduindo/teste-frontend-2015/issues"
+  },
+  "homepage": "https://github.com/duduindo/teste-frontend-2015#readme",
+  "dependencies": {
+    "jshint": "^2.8.0",
+    "uglifyjs": "^2.4.10",
+    "uglifyjs-folder": "^0.2.1"
+  }
+}
