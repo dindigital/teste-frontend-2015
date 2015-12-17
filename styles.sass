@@ -1,0 +1,171 @@
+$header-footer-bg: #e8ebf0
+$button-bg: #72dae7
+$page-border: #999
+$maps-bg: #e8fcfd
+$maps-border: #e8fcfd
+$black: #000
+$border-link: #2da9cb
+
+*
+	box-sizing: border-box
+
+body
+	margin: 0
+	padding: 0
+	font-family: Arial, sans-serif
+	font-size: 15px
+
+.container
+	max-width: 960px
+	margin: 0 auto
+
+header
+	background-color: $header-footer-bg
+
+.sprite
+	background-image: url('result.png')
+	display: inline-block
+
+.logo
+	width: 156px
+	height: 40px
+	background-position: -0px -0px
+
+.menu
+	display: flex
+	justify-content: flex-end
+
+	ul
+		list-style: none
+
+	li
+		display: inline
+		margin: 0 12px
+
+	a
+		text-decoration: none
+		color: $black
+		&:hover
+			padding-top: 3px
+			border-top: 5px solid $border-link
+
+h2
+	border-bottom: 1px solid $page-border
+	padding-bottom: 5px
+
+.contact-form
+	display: inline-flex
+	flex-direction: column
+	max-width: 62%
+
+	a
+		text-decoration: none
+		color: $button-bg
+		font-weight: bold
+
+.contact-address
+	margin: 0 0 5% 3%
+	display: inline-flex
+	flex-direction: column
+	max-width: 33%
+	
+.form input,
+.form textarea
+	display: block
+	margin: 7px 0 10px 0
+	width: 85%
+
+.form
+	margin-top: 10px
+
+	input
+		height: 30px
+	
+	button
+		padding: 12px 25px
+		border: none
+		border-radius: 5px
+		background-color: $button-bg
+		font-weight: bold
+
+.here
+	padding: 20px
+	background-color: $maps-bg
+	border: 1px solid $maps-border
+
+footer
+	background-color: $header-footer-bg
+
+.footer-item
+	display: inline-flex
+	max-width: 15%
+	flex-direction: column
+
+	p
+		margin: 0
+
+	p + p
+		margin-top: 10px
+
+.footer-item + .footer-item
+	margin-left: 3%
+
+.first
+	max-width: 28%
+
+.footer-connect
+	display: inline-table
+	max-width: 20%
+	margin-left: 5%
+
+	.sprite
+		margin-right: 5px
+
+.social-facebook
+	background-position: -0px -50px
+	width: 53px
+	height: 51px
+
+.social-dribbble
+	background-position: -0px -111px
+	width: 53px
+	height: 51px
+
+.social-pinterest
+	background-position: -0px -172px
+	width: 53px
+	height: 51px
+
+.social-linkedin
+	background-position: -0px -233px
+	width: 53px
+	height: 51px
+
+.social-skype
+	background-position: -0px -294px
+	width: 53px
+	height: 51px
+
+.social-share
+	background-position: -0px -355px
+	width: 53px
+	height: 51px
+
+.email
+	background-position: -0px -416px
+	width: 24px
+	height: 17px
+
+.footer-text
+	display: inline-flex
+	margin-top: 5%
+	font-size: 14px
+
+.footer-logo
+	width: 156px
+	height: 40px
+	background: url('result.png')
+	background-position: -0px -0px
+	display: inline-flex
+	margin: 0 0 3% 10%
+	vertical-align: text-top
