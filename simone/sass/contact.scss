@@ -1,0 +1,130 @@
+//variables
+$clear:both;
+$font-family: Arial, sans-serif;
+
+$left: left;
+$right: right;
+
+$path-to-img : "../images";
+
+/* ----- Contact Content Styling ----- */
+
+#contact_area {
+    background: url(#{$path-to-img}/banner_shadow.png) repeat-x;
+    border-top: 1px solid #d9d9d9;
+    padding-top: 38px;
+}
+
+#contact {
+    background: url(#{$path-to-img}/envelope_icon.png) no-repeat;
+    font-size: 15px;
+    font-weight: bold;
+    height: 15px;
+    margin: 6px 0 17px 0;
+    padding: 2px 0 0 40px;
+}
+
+#contact_info {
+    border-top: 1px solid #dfe1e5;
+    padding-top: 10px;
+
+    p {
+	    font-size: 14px;
+	    line-height: 16px;
+	    margin-bottom: 20px;
+	}
+}
+
+#contact_info_left {
+    float: left;
+    margin: 27px 0 33px 0;
+    width: 574px;
+}
+
+#contact_info_left p a:hover {
+    text-decoration: underline;
+}
+
+#contact_info_right {
+    float: right;
+    margin-top: 30px;
+}
+
+#location_map {
+    background: #e8fcfe;
+    border: 1px solid #81e4ed;
+    margin: 0 20px 36px 0;
+    padding: 20px;
+
+    h3 {
+	    font-size: 14px;
+	    font-weight: bold;
+	    margin-bottom: 20px;
+	}
+
+	img {
+    	border: 5px solid #fff;
+	}
+}
+
+#address {
+
+	h3{
+	    font-size: 15px;
+	    font-weight: bold;
+	    margin-bottom: 20px;
+	}
+
+	p {
+    	color: #363636;
+	}
+
+}
+
+/* ----- Contact Content Styling ----- */
+
+/* ----- Form Styling ----- */
+
+#contact_form {
+    width: 480px;
+    li {
+	    font-size: 14px;
+	    padding: 2px 0px;
+	}
+	label {
+	    display: block;
+	    margin: 12px 0;
+	}
+	input {
+    	height: 35px;
+    	border: 1px solid #b4bac5;
+
+    	&:focus{
+    		border: 1px solid #2aacc8;
+    	}
+	}
+
+	input[type="submit"] {
+	    background: url(#{$path-to-img}/submit_button.png) no-repeat;
+	    border: none;
+	    cursor: pointer;
+	    font-size: 18px;
+	    font-weight: bold;
+	    height: 64px;
+	    margin-top: 20px;
+	    padding: 0 0 6px 30px;
+	    width: 160px;
+	}
+	input[type="submit"]:hover {
+	    color: #fff;
+	}
+	textarea {
+		border: 1px solid #b4bac5;
+
+		&:focus {
+		    border: 1px solid #2aacc8;
+		}
+	}
+}
+
+/* ----- Form Styling ----- */
