@@ -1,0 +1,83 @@
+body {
+  font-family: sans-serif;
+  margin: 0 auto; }
+
+body > header {
+  align-items: center;
+  background-color: #e8ebf0;
+  border-bottom: 1px solid #d9d9d9;
+  display: inline-flex;
+  justify-content: center;
+  height: 120px;
+  width: 100vw; }
+  body > header nav {
+    vertical-align: middle;
+    width: 40%; }
+    body > header nav:nth-of-type(1) {
+      width: 30%; }
+    body > header nav:nth-of-type(2) {
+      width: 50%; }
+    body > header nav > ul {
+      display: inline-flex;
+      justify-content: space-between;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+      body > header nav > ul a {
+        color: #000;
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase; }
+      body > header nav > ul span {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: bold;
+        height: 15px;
+        text-align: center;
+        transform: rotate(90deg);
+        transition: transform .25s;
+        width: 15px; }
+      body > header nav > ul > li {
+        padding: 10px;
+        position: relative;
+        /* Submenu */ }
+        body > header nav > ul > li.ativo {
+          border-top: 6px solid #30ACCC;
+          margin-top: -6px; }
+        body > header nav > ul > li:hover {
+          background-color: #fff;
+          border-top: 6px solid #30ACCC;
+          margin-top: -6px; }
+          body > header nav > ul > li:hover span {
+            transform: rotate(-90deg); }
+          body > header nav > ul > li:hover ul {
+            max-height: 500px; }
+        body > header nav > ul > li ul {
+          background-color: #fff;
+          list-style-type: none;
+          margin: 0 0 0 -10px;
+          max-height: 0px;
+          overflow-y: hidden;
+          padding: 0;
+          position: absolute;
+          width: 200%; }
+          body > header nav > ul > li ul li {
+            align-items: center;
+            display: flex;
+            height: 35px;
+            padding: 0 5px; }
+            body > header nav > ul > li ul li:not(:last-child) {
+              border-bottom: 1px solid #e7e7e7; }
+          body > header nav > ul > li ul a {
+            text-transform: capitalize; }
+            body > header nav > ul > li ul a:hover {
+              color: #2aacc8; }
+
+main {
+  width: 100vw; }
+  main section {
+    margin: 0 auto;
+    width: 80%; }
+
+/*# sourceMappingURL=style.css.map */
