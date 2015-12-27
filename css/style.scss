@@ -1,7 +1,6 @@
 // Estilos base
-@import '_base/_base';
 @import '_base/_normalize';
-@import '_base/_forms';
+@import '_base/_base';
 
 //Estilos úteis
 @import '_utilities/_variables';
@@ -16,11 +15,10 @@
 @import '_layout/_footer';
 
 //Estilos para módulos
-@import '_module/_buttons';
+@import '_modules/_forms';
+@import '_modules/_buttons';
 
 //Estilos para temas
-//@import '_theme/_brightTheme';
-//@import '_theme/_darkTheme';
 
 //Estilos de estados
 @import '_state/_states';
