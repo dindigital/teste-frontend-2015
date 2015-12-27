@@ -1,0 +1,78 @@
+//Váriavel de font-base
+$basefontsize: 16 !default;
+
+//Váriaveis para cores
+$black-color: #000;
+$blue-color: #129fea;
+$bg-color: #f0ebe7;
+$gray-color: #e0e3e5;
+$purple-color: #8870ac;
+$green-color: #5bcf90;
+$red-color: #e51b23;
+$success-color: #45ca69;
+$error-color: #f71010;
+$yellow-color: #ffb800;
+$white-color: #fff;
+
+//cores de segundo plano
+$secondary-black-color: #333;
+$secondary-blue-color: #47b4df;
+$secondary-red-color: #da3c3c;
+$secondary-gray-color: #b3b6b7;
+$third-gray-color: #4d4d4d;
+
+//Shades
+$light-grey: #ccd1d9;
+$grey: #656d78;
+$dark-grey: #434a54;
+
+//Indicators
+$info: #149cfd;
+$error: #e01a2e;
+$warning: #ffc200;
+$success: #05be55;
+
+//Palette
+$light: #e3e7ec;
+$primary: #05bed5;
+$secondary: #8d48ab;
+$tertiary: #b2347e;
+
+//Váriaveis para svg em base-64
+$svg-upload: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzIgMzIiPiAgPGc+ICAgIDxwYXRoIGQ9Ik0yNy41ODYgMTIuNzEyQzI2LjY2IDEwLjI1MSAyNC4yODQgOC41IDIxLjUgOC41Yy0wLjY0MSAwLTEuMjYgMC4wOTMtMS44NDYgMC4yNjZDMTguMDY4IDYuMjA1IDE1LjIzMyA0LjUgMTIgNC41Yy00LjkwNCAwLTguODk0IDMuOTI0LTguOTk4IDguODAzQzEuMjA3IDE0LjM0MiAwIDE2LjI4MyAwIDE4LjVjMCAzLjMxMiAyLjY4OCA2IDYgNmg2di0ySDUuOTk3QzMuNzk0IDIyLjUgMiAyMC43MDkgMiAxOC41YzAtMS44OTMgMS4zMTctMy40ODIgMy4wODctMy44OTZDNS4wMjkgMTQuMjQ1IDUgMTMuODc2IDUgMTMuNWMwLTMuODY2IDMuMTM0LTcgNy03IDMuMTYyIDAgNS44MzQgMi4wOTcgNi43MDIgNC45NzUgMC43NjktMC42MTEgMS43MzktMC45NzUgMi43OTgtMC45NzUgMi4zMTYgMCA0LjIyNSAxLjc1IDQuNDczIDRoMC4wM2MyLjIwMyAwIDMuOTk3IDEuNzkxIDMuOTk3IDQgMCAyLjIwNS0xLjc4OSA0LTMuOTk3IDRIMjB2Mmg2YzMuMzEyIDAgNi0yLjY5MyA2LTZDMzIgMTUuNzM1IDMwLjEzIDEzLjQwNyAyNy41ODYgMTIuNzEyeiIgZmlsbD0iIzAzMDEwNCIvPiAgICA8cG9seWdvbiBwb2ludHM9IjE2IDEzLjUgMTEgMTkuNSAxNCAxOS41IDE0IDI3LjUgMTggMjcuNSAxOCAxOS41IDIxIDE5LjUgIiBmaWxsPSIjMDMwMTA0Ii8+ICA8L2c+PC9zdmc+);
+
+$select-arrow: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDUxLjg0N3B4IiBoZWlnaHQ9IjQ1MS44NDdweCIgdmlld0JveD0iMCAwIDQ1MS44NDcgNDUxLjg0NyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDUxLjg0NyA0NTEuODQ3Ij4gIDxwYXRoIGQ9Ik0yMjUuOTIzIDM1NC43MDZjLTguMDk4IDAtMTYuMTk1LTMuMDkyLTIyLjM2OS05LjI2M0w5LjI3IDE1MS4xNTdjLTEyLjM1OS0xMi4zNTktMTIuMzU5LTMyLjM5NyAwLTQ0Ljc1MSAxMi4zNTQtMTIuMzU0IDMyLjM4OC0xMi4zNTQgNDQuNzQ4IDBsMTcxLjkwNSAxNzEuOTE1IDE3MS45MDYtMTcxLjkwOWMxMi4zNTktMTIuMzU0IDMyLjM5MS0xMi4zNTQgNDQuNzQ0IDAgMTIuMzY1IDEyLjM1NCAxMi4zNjUgMzIuMzkyIDAgNDQuNzUxTDI0OC4yOTIgMzQ1LjQ0OUMyNDIuMTE1IDM1MS42MjEgMjM0LjAxOCAzNTQuNzA2IDIyNS45MjMgMzU0LjcwNnoiIC8+PC9zdmc+);
+
+//Váriaveis para cubic-belzier
+// Cubic
+$easeInCubic: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$easeOutCubic: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+// Circ
+$easeInCirc: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+$easeOutCirc: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+// Expo
+$easeInExpo: cubic-bezier(0.950, 0.050, 0.795, 0.035);
+$easeOutExpo: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$easeInOutExpo: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+// Quad
+$easeInQuad: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$easeOutQuad: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$easeInOutQuad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+// Quart
+$easeInQuart: cubic-bezier(0.895, 0.030, 0.685, 0.220);
+$easeOutQuart: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+$easeInOutQuart: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+// Quint
+$easeInQuint: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+$easeOutQuint: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$easeInOutQuint: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+// Sine
+$easeInSine: cubic-bezier(0.470, 0.000, 0.745, 0.715);
+$easeOutSine: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+$easeInOutSine: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+// Back
+$easeInBack: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+$easeInOutBack: cubic-bezier(0.680, -0.550, 0.265, 1.550);

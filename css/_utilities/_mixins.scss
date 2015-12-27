@@ -1,0 +1,262 @@
+//imports
+@import '_functions.scss';
+@import '_variables.scss';
+
+// CSS transition
+@mixin transition($transition-property...) {
+  -webkit-transition: $transition-property;
+  -moz-transition: $transition-property;
+  -ms-transition: $transition-property;
+  -o-transition: $transition-property;
+  transition: $transition-property;
+}
+
+// CSS transform
+@mixin transform($transform-property...) {
+  -webkit-transform: $transform-property;
+  -moz-transform: $transform-property;
+  -ms-transform: $transform-property;
+  -o-transform: $transform-property;
+  transform: $transform-property;
+}
+
+//css linear-gradient
+@mixin linear-gradient($direction, $gradients...) {
+  background-color: nth($gradients, 1);
+  background-image: -webkit-linear-gradient($direction, $gradients...);
+  background-image: -o-linear-gradient($direction, $gradients...);
+  background-image: linear-gradient($direction, $gradients...);
+}
+
+// CSS Box-shadow
+@mixin box-shadow($inset, $shadow-properties...) {
+  @if $inset {
+    -webkit-box-shadow: inset $shadow-properties;
+    -moz-box-shadow: inset $shadow-properties;
+    box-shadow: inset $shadow-properties;
+  }
+  @else {
+    -webkit-box-shadow: $shadow-properties;
+    -moz-box-shadow: $shadow-properties;
+    box-shadow: $shadow-properties;
+  }
+}
+
+// Ellipsis
+@mixin ellipsis ($max-width) {
+  display: inline-block;
+  max-width: $max-width;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//mixin for box-sizing
+@mixin box-sizing($content-box){
+  -webkit-box-sizing: $content-box;
+  -moz-box-sizing: $content-box;
+  box-sizing: $content-box;
+}
+
+//mixin for REM font
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+//mixin for REM in properties with multiples values
+@mixin rem($property, $px: $basefontsize) {
+  $pxvalues: null;
+  $remvalues: null;
+
+  @each $pxvalue in $px {
+    $pxvalues: append($pxvalues, ($pxvalue)+px);
+    $remvalues: append($remvalues, ($pxvalue/$basefontsize)+rem);
+    }
+
+  #{$property}: $pxvalues;
+  #{$property}: $remvalues;
+}
+
+// mixin for CSS calc() function
+@mixin calc($properties, $expression) {
+  // PS: in $expression is necessary put the maths functions with spaces between them and set them like string
+  #{$properties}: -webkit-calc(#{$expression});
+  #{$properties}: -moz-calc(#{$expression});
+  #{$properties}: -o-calc(#{$expression});
+  #{$properties}: calc(#{$expression});
+}
+
+//mixin for media queries
+@mixin sm-size {
+  @media only screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin md-size {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin lg-size {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+// CSS flex-box
+//for container box
+@mixin flexbox-container($display, $flex-direction, $flex-wrap, $justify-content, $align-items, $align-content) {
+  @if $display==flex {
+    display: -webkit-box;  /* Chrome 20-, iOS 6-, Safari 3.1  -6 */
+    display: -webkit-flex;  /* Chrome 21 + */
+    display: -moz-box;  /* FF 19- */
+    display: -moz-flex;  /* FF 20+ */
+    display: -ms-flexbox;  /* IE 10 */
+    display: flex;  /* FF 20+, Chrome 29+, Opera 12.1, 17+ */
+  }
+  @elseif $display==inline-flex {
+    display: -webkit-inline-box;  /* Chrome 20-, iOS 6-, Safari 3.1  -6 */
+    display: -webkit-inline-flex;  /* Chrome 21 + */
+    display: -moz-inline-box;  /* FF 19- */
+    display: -moz-inline-flex;  /* FF 20+ */
+    display: -ms-inline-flexbox;  /* IE 10 */
+    display: inline-flex;  /* FF 20+, Chrome 29+, Opera 12.1, 17+ */
+  }
+
+  //flex-direction to old and new flex-box
+  @if $flex-direction==row {
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+  }
+  @elseif $flex-direction==row-reverse {
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+  }
+  @elseif $flex-direction==column {
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  @elseif $flex-direction==column-reverse {
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  -webkit-flex-direction: $flex-direction;
+  -ms-flex-direction: $flex-direction;
+  flex-direction: $flex-direction;
+  // IE 10
+  @if $flex-wrap==nowrap {
+    -ms-flex-wrap: none;
+  }
+  @else {
+    -ms-flex-wrap: $flex-wrap;
+  }
+  -webkit-flex-wrap: $flex-wrap;  /* Chrome 20-, iOS 6-, Safari 3.1 - 6 */
+  flex-wrap: $flex-wrap;  /* FF 28+, Chrome 21+, Opera 12.1, 17+, IE 11 */
+
+  //$justify-content to old and new flex-box
+  @if $justify-content==flex-start {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+  }
+  @elseif $justify-content==flex-end {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+  }
+  @elseif $justify-content==space-between {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+  }
+  @elseif $justify-content==space-around {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: distribute;
+  }
+  @else {
+    -webkit-box-pack: $justify-content;
+    -moz-box-pack: $justify-content;
+    -ms-flex-pack: $justify-content;
+  }
+  -webkit-justify-content: $justify-content;
+  justify-content: $justify-content;
+  //align-items to old and new flex-box
+  @if $align-items==flex-end {
+    -ms-flex-align: end;
+    -webkit-box-align: end;
+    -moz-box-align: end;
+  }
+  @elseif $align-items==flex-start {
+    -ms-flex-align: start;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+  }
+  @else {
+    -webkit-box-align: $align-items;
+    -moz-box-align: $align-items;
+    -webkit-align-items: $align-items;
+  }
+  -ms-flex-align: $align-items;
+  align-items: $align-items;
+  //align-content for multiples browsers
+  @if $align-content==flex-start {
+    -ms-flex-line-pack: start;
+  }
+  @elseif $align-content==flex-end {
+    -ms-flex-line-pack: end;
+  }
+  @elseif $align-content==space-between {
+    -ms-flex-line-pack: justify;
+  }
+  @elseif $align-content==space-around {
+    -ms-flex-line-pack: distribute;
+  }
+  @else {
+    -ms-flex-line-pack: distribute;
+  }
+  -webkit-align-content: $align-content;
+  align-content: $align-content;
+}
+
+//for childrens of the box
+@mixin flexbox-itens($flex-order, $align-self, $flex) {
+  -webkit-box-ordinal-group: $flex-order + 1;  /* Chrome 20-, iOS 6-, Safari 3.1 - 6 */
+  -moz-box-ordinal-group: $flex-order + 1;  /* FF 19- */
+  -ms-flex-order: $flex-order;  /* IE 10 */
+  -webkit-order: $flex-order;  /* Chrome 21 - 28 */
+  order: $flex-order;  /* FF 20+, Chrome 29+, Opera 12.1, 17+ */
+  -webkit-box-flex: $flex;  /* Chrome 20-, iOS 6-, Safari 3.1 - 6 */
+  -moz-box-flex: $flex;  /* FF 19- */
+  -webkit-flex: $flex;  /* Chrome 21 - 28 */
+  -ms-flex: $flex;  /* IE 10 */
+  flex: $flex;  /* FF 20+, Chrome 29+, Opera 12.1, 17+ */
+  @if $align-self==flex-start {
+    -ms-flex-item-align: start;
+  }
+  @elseif $align-self==flex-end {
+    -ms-flex-item-align: end;
+  }
+  @else {
+    -ms-flex-item-align: $align-self;
+  }
+  -webkit-align-self: $align-self;
+  align-self: $align-self;
+  //A propriedade FLEX é uma atalho para a mesma coisa escrita abaixo
+  //-webkit-flex-grow: 1;
+  //-webkit-flex-shrink: 1;
+  //-webkit-flex-basis: auto;
+}

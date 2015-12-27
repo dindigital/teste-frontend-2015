@@ -1,0 +1,9 @@
+.m-container {
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 0 0.625em;
+
+  @media(max-width: 481px) {
+    padding: 0 1.250em;
+  }
+}
