@@ -1,0 +1,20 @@
+{
+  "name": "teste-front",
+  "version": "1.0.0",
+  "description": "Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Willian Santos",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-ruby-sass": "^2.0.4",
+    "gulp-uglify": "^1.4.1",
+    "imagemin-pngquant": "^4.2.0"
+  }
+}
