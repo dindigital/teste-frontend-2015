@@ -1,9 +1,4 @@
 .m-container {
   max-width: 62.5em;
   margin: 0 auto;
-  padding: 0 .625em;
-
-  @media(min-width: 481px) {
-    padding: 0 1.25em;
-  }
 }

@@ -1,43 +1,4 @@
 @import '../_utilities/_mixins.scss';
 @import '../_utilities/_variables.scss';
 
-[type='submit'],
-.m-button,
-button {
-  background-color: $gray-color;
-  @include transition(background-color .5s linear);
-  color: $black-color;
-  cursor: pointer;
-  border: .125rem solid $gray-color;
-  font-weight: 500;
-  line-height: 1.375rem;
-  @include rem(padding, 8 12);
-
-  &:hover {
-    background-color: lighten($gray-color, 5%);
-  }
-}
-
-//submit tipo image
-[type='image'] {
-  background-color: $gray-color;
-  line-height: 1.375rem;
-  height: 2.126rem;
-  @include rem(padding, 8 12);
-  @include transition(background-color .5s linear);
-
-  &:hover {
-    background-color: lighten($gray-color, 5%);
-  }
-}
-
-// Button default sizes
-.m-button--sm {
-  @extend .m-button;
-  font-size: ;
-}
-
-.m-button--lg {
-  @extend .m-button;
-  font-size: ;
-}
+//buttons
