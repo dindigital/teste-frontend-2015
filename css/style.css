@@ -241,11 +241,7 @@ a {
 
 .m-container {
   max-width: 62.5em;
-  margin: 0 auto;
-  padding: 0 .625em; }
-  @media (min-width: 481px) {
-    .m-container {
-      padding: 0 1.25em; } }
+  margin: 0 auto; }
 
 /* default */
 .grid-xs-1,
