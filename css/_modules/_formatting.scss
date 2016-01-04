@@ -1,0 +1,93 @@
+//imports
+@import '_utilities/_variables';
+@import '_utilities/_mixins';
+@import '_utilities/_functions';
+
+.m-paragraph {
+  @include font-size(13);
+  font-weight: 300;
+  @include rem(line-height, 22);
+  @include rem(margin-bottom, 30);
+}
+
+.m-title {
+  position: relative;
+
+  &__iconLeft {
+    @extend .m-title;
+    @include font-size(15);
+    @include rem(padding-left, 60);
+
+    &:before {
+      display: inline-block;
+      @include rem(height, 40);
+      left: 0;
+      @include rem(margin-top, -20);
+      position: absolute;
+      top: 50%;
+      @include rem(width, 40);
+    }
+
+    &--clean,
+    &--responsive,
+    &--fully,
+    &--ready {
+      @extend .m-title__iconLeft;
+      @include rem(margin-bottom, 28);
+    }
+
+    &--latest,
+    &--testimonials,
+    &--clients {
+      @extend .m-title__iconLeft;
+      @include rem(margin-bottom, 20);
+      @include rem(padding-left, 40);
+
+      &:before {
+        @include rem(margin-top, -12);
+      }
+    }
+
+    &--clean {
+      &:before {
+        content: url('../../image/icons/iconCleanTheme.png');
+      }
+    }
+
+    &--responsive {
+      &:before {
+        content: url('../../image/icons/iconFullScreen.png');
+      }
+    }
+
+    &--fully {
+      &:before {
+        content: url('../../image/icons/iconBurguer.png');
+      }
+    }
+
+    &--ready {
+      &:before {
+        content: url('../../image/icons/iconSent.png');
+      }
+    }
+
+    &--latest {
+      &:before {
+        content: url('../../image/icons/iconLatestWorks.png');
+      }
+    }
+
+    &--testimonials {
+      &:before {
+        content: url('../../image/icons/iconTestimonials.png');
+      }
+    }
+
+    &--clients {
+      &:before {
+        content: url('../../image/icons/iconClients.png');
+      }
+    }
+  }
+}

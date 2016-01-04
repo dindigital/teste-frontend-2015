@@ -1,1 +1,14 @@
-//hover states
+//imports
+@import '_utilities/_variables';
+@import '_utilities/_mixins';
+@import '_utilities/_functions';
+
+.s-slideShowActive {
+  opacity: 1;
+  position: relative;
+  visibility: visible;
+}
+
+.s-labelActive {
+  background-color: $whiteColor;
+}

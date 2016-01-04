@@ -12,4 +12,29 @@
     @include rem(max-width, 622);
     @include rem(margin, 38 0);
   }
+
+  .m-boxA {
+    @extend .e-clearfix;
+
+    &__item {
+      float: left;
+    }
+  }
+
+  .m-boxB__slideBox{
+    @extend .e-clearfix;
+
+    &__wrapper{
+      float: left;
+    }
+  }
+
+  .m-boxC {
+    @extend .e-clearfix;
+
+    &__sectionA,
+    &__sectionB {
+      float: left;
+    }
+  }
 }

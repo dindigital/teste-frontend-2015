@@ -1,0 +1,133 @@
+//imports
+@import '_utilities/_variables';
+@import '_utilities/_mixins';
+@import '_utilities/_functions';
+
+.m-sliderBoxA {
+  background-color: $blueLightColor;
+  margin-top: 1px;
+
+  &__container {
+    margin: 0;
+    overflow: hidden;
+    @include rem(padding, 20 0 10);
+    position: relative;
+
+    &__img {
+      left: 0;
+      max-width: 100%;
+      opacity: 0;
+      position: absolute;
+      visibility: hidden;
+      @include transition(opacity .15s ease-in-out, visibility .15s ease-in-out);
+    }
+  }
+
+  &__labelBox {
+    display: block;
+    @include rem(padding-bottom, 10);
+    text-align: center;
+    &__item {
+      background-color: rgba($blackColor, .3);
+      border-radius: 50%;
+      cursor: pointer;
+      display: inline-block;
+      @include rem(height, 14);
+      @include rem(width, 14);
+      @include transition(background-color .15s ease-in-out);
+      + .m-sliderBoxA__labelBox__item {
+        @include rem(margin-left, 14);
+      }
+    }
+  }
+}
+
+.m-boxA {
+  @include flexbox-container(flex, null, nowrap, flex-end, null, null);
+  @include rem(padding-top, 60);
+
+  &__container{
+    background-color: $bgColor;
+    @include box-shadow(null, 0 0 1px $blackColor);
+  }
+
+  &__item {
+    @include flexbox-itens(0, auto, 1 1 auto);
+      @include calc(width, '(100% - 120px) / 4');
+
+    + .m-boxA__item {
+      @include rem(margin-left, 40);
+    }
+  }
+}
+
+.m-boxB {
+  max-width: 100%;
+
+  &__header {
+    border-bottom: 1px solid darken($grayColor, 7.5%);
+    @include rem(margin-top, 28);
+    position: relative;
+  }
+
+  &__pagination {
+    @include rem(margin-top, -20);
+    position: absolute;
+    right: 0;
+    top: 50%;
+
+    &__item {
+      cursor: pointer;
+
+      &:first-child {
+        @include rem(margin, 0 7);
+      }
+    }
+  }
+
+  &__slideContainer {
+    border-bottom: 1px solid darken($grayColor, 7.5%);
+    @include rem(margin-top, 20);
+    @include rem(padding-bottom, 40);
+    overflow: hidden;
+  }
+
+  &__slideBox {
+    @include flexbox-container(flex, null, null, null, null, null);
+
+    &__wrapper {
+      display: inline-block;
+      @include flexbox-itens(0, auto, 0 1 auto);
+      @include calc(max-width, '(100% - 120px) / 4');
+      margin: 0;
+
+      + .m-boxB__slideBox__wrapper{
+        @include rem(margin-left, 40);
+      }
+    }
+
+    &__img{
+      max-width: 100%;
+    }
+  }
+}
+
+.m-boxC {
+  @include rem(margin-top, 22);
+  @include flexbox-container(flex, null, nowrap, null, null, null);
+
+  &__sectionA,
+  &__sectionB {
+    position: relative;
+    @include calc(width, '(100% - 42px) / 2');
+  }
+
+  &__sectionA {
+    @include rem(padding-right, 58);
+    @include rem(margin-right, 21);
+  }
+
+  &__sectionB {
+    @include rem(margin-left, 21);
+  }
+}
