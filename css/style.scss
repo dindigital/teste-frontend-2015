@@ -1,28 +1,27 @@
-// Estilos base
+//styles for reset and normalize
 @import '_base/_normalize';
 @import '_base/_base';
 
-//Estilos úteis
+//general styles
 @import '_utilities/_variables';
 @import '_utilities/_mixins';
 @import '_utilities/_functions';
 @import '_utilities/_extends';
 
-//Estilos de layout
+//styles for layout
 @import '_layout/_container';
 @import '_layout/_header';
 @import '_layout/_footer';
 
-//Estilos para módulos
+//styles for modules
 @import '_modules/_logos';
 @import '_modules/_menu';
 @import '_modules/_forms';
 @import '_modules/_buttons';
+@import '_modules/_boxes';
 
-//Estilos para temas
-
-//Estilos de estados
+//styles for states
 @import '_state/_states';
 
-//Estilos para hacks(ainda avaliando a necessidade)
+//styles for hacks(ex: no support for flexbox in IE9)
 @import '_hacks/_falback';

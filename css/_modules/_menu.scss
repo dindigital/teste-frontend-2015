@@ -2,6 +2,7 @@
 @import '_utilities/_variables';
 @import '_utilities/_mixins';
 @import '_utilities/_functions';
+
 .m-menu {
   @include flexbox-container(flex, null, nowrap, flex-end, center, null);
   @include flexbox-itens(2, auto, 2 1 auto);
