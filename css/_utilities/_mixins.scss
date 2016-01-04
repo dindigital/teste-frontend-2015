@@ -20,14 +20,6 @@
   transform: $transform-property;
 }
 
-//css linear-gradient
-@mixin linear-gradient($direction, $gradients...) {
-  background-color: nth($gradients, 1);
-  background-image: -webkit-linear-gradient($direction, $gradients...);
-  background-image: -o-linear-gradient($direction, $gradients...);
-  background-image: linear-gradient($direction, $gradients...);
-}
-
 // CSS Box-shadow
 @mixin box-shadow($inset, $shadow-properties...) {
   @if $inset {
@@ -42,28 +34,10 @@
   }
 }
 
-// Ellipsis
-@mixin ellipsis ($max-width) {
-  display: inline-block;
-  max-width: $max-width;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-//mixin for box-sizing
-@mixin box-sizing($content-box){
-  -webkit-box-sizing: $content-box;
-  -moz-box-sizing: $content-box;
-  box-sizing: $content-box;
-}
-
 //mixin for REM font
 @mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
+  font-size: $size + px;
+  font-size: $size/16 + rem;
 }
 
 //mixin for REM in properties with multiples values
@@ -87,25 +61,6 @@
   #{$properties}: -moz-calc(#{$expression});
   #{$properties}: -o-calc(#{$expression});
   #{$properties}: calc(#{$expression});
-}
-
-//mixin for media queries
-@mixin sm-size {
-  @media only screen and (min-width: 769px) {
-    @content;
-  }
-}
-
-@mixin md-size {
-  @media only screen and (min-width: 992px) {
-    @content;
-  }
-}
-
-@mixin lg-size {
-  @media only screen and (min-width: 1200px) {
-    @content;
-  }
 }
 
 // CSS flex-box

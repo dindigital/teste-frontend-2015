@@ -10,11 +10,11 @@
 
 //Estilos de layout
 @import '_layout/_container';
-@import '_layout/_grid';
 @import '_layout/_header';
 @import '_layout/_footer';
 
 //Estilos para módulos
+@import '_modules/_logos';
 @import '_modules/_menu';
 @import '_modules/_forms';
 @import '_modules/_buttons';

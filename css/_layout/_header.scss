@@ -2,10 +2,14 @@
 @import '_utilities/_variables';
 @import '_utilities/_mixins';
 @import '_utilities/_functions';
-@import '_utilities/_extends';
 
 //header
 .l-header {
   background-color: $bgColor;
-  @include rem(min-height, 120);
+  @include box-shadow(null, 0 0 1px $blackColor);
+}
+
+
+.l-navbar {
+  @include flexbox-container(flex, null, nowrap, null, center, null);
 }

@@ -1,0 +1,15 @@
+.e-clearfix {
+  display: block;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+    visibility: hidden;
+  }
+
+  &:after {
+    clear: both;
+    height: 0;
+  }
+}

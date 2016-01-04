@@ -1,1 +1,15 @@
-﻿
+@import '_utilities/_extends';
+
+//estilos para onde não tiver suporte a flexbox
+.no-flexbox.no-flexboxlegacy {
+  .l-navbar {
+    @extend .e-clearfix;
+  }
+
+  .m-menu {
+    display: inline-block;
+    float: right;
+    @include rem(max-width, 622);
+    @include rem(margin, 38 0);
+  }
+}
