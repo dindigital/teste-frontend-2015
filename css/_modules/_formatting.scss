@@ -8,6 +8,11 @@
   font-weight: 300;
   @include rem(line-height, 22);
   @include rem(margin-bottom, 30);
+
+  &--medium{
+    @extend .m-paragraph;
+  @include font-size(16);
+  }
 }
 
 .m-title {
@@ -88,6 +93,24 @@
       &:before {
         content: url('../../image/icons/iconClients.png');
       }
+    }
+  }
+}
+
+.m-link {
+  &__readMore {
+    color: $blueColor;
+    display: inline-block;
+    @include font-size(13);
+    @include rem(margin-bottom, 50);
+    @include rem(padding-left, 15);
+    position: relative;
+
+    &:before {
+      content: url('../../image/icons/iconArrow.png');
+      left: 0;
+      position: absolute;
+      @include rem(top, -2);
     }
   }
 }

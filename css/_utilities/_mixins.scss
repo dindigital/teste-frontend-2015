@@ -11,15 +11,6 @@
   transition: $transition-property;
 }
 
-// CSS transform
-@mixin transform($transform-property...) {
-  -webkit-transform: $transform-property;
-  -moz-transform: $transform-property;
-  -ms-transform: $transform-property;
-  -o-transform: $transform-property;
-  transform: $transform-property;
-}
-
 // CSS Box-shadow
 @mixin box-shadow($inset, $shadow-properties...) {
   @if $inset {
