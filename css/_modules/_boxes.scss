@@ -133,9 +133,7 @@
 }
 
 .m-boxD {
-  @include box-shadow(null, 0 0 4px 2px $grayColor);
   @include flexbox-container(flex, null, wrap, null, null, null);
-  @include rem(padding, 1);
 
   &__wrapper {
     background-color: rgba($grayColor, .2);
@@ -155,6 +153,22 @@
 .m-boxE {
   background-color: rgba($blueLightColor, .32);
   border: 1px solid $blueColor;
-  @include rem(margin-top, 40);
-  @include rem(padding, 38 32);
+  @include flexbox-container(flex, null, nowrap, null, null, null);
+  @include rem(margin, 40 0);
+  @include rem(padding, 22 32 16);
+
+  &__sectionA
+  &__sectionB {
+    display: inline-block;
+  }
+
+  &__sectionA {
+    @include rem(width, 600);
+  }
+
+  &__sectionB {
+    @include rem(padding-top, 20);
+    text-align: right;
+    @include rem(width, 320);
+  }
 }

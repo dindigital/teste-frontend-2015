@@ -239,13 +239,13 @@ a {
   a:visited {
     color: inherit; }
 
-.e-clearfix, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD {
+.e-clearfix, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxE {
   display: block; }
-  .e-clearfix:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD:before, .e-clearfix:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD:after {
+  .e-clearfix:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxE:before, .e-clearfix:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxE:after {
     content: " ";
     display: table;
     visibility: hidden; }
-  .e-clearfix:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD:after {
+  .e-clearfix:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxE:after {
     clear: both;
     height: 0; }
 
@@ -283,6 +283,14 @@ a {
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-line-pack: distribute; }
+
+.l-footer {
+  background-color: #e8ebf1;
+  -webkit-box-shadow: 0 0 1px #000;
+  -moz-box-shadow: 0 0 1px #000;
+  box-shadow: 0 0 1px #000;
+  min-height: 320px;
+  min-height: 20rem; }
 
 .m-logo__header {
   display: inline-block;
@@ -632,9 +640,6 @@ a {
     margin-left: 1.3125rem; }
 
 .m-boxD {
-  -webkit-box-shadow: 0 0 4px 2px #e7e7e7;
-  -moz-box-shadow: 0 0 4px 2px #e7e7e7;
-  box-shadow: 0 0 4px 2px #e7e7e7;
   display: -webkit-box;
   /* Chrome 20-, iOS 6-, Safari 3.1  -6 */
   display: -webkit-flex;
@@ -652,9 +657,7 @@ a {
   /* Chrome 20-, iOS 6-, Safari 3.1 - 6 */
   flex-wrap: wrap;
   /* FF 28+, Chrome 21+, Opera 12.1, 17+, IE 11 */
-  -ms-flex-line-pack: distribute;
-  padding: 1px;
-  padding: 0.0625rem; }
+  -ms-flex-line-pack: distribute; }
   .m-boxD__wrapper {
     background-color: rgba(231, 231, 231, 0.2);
     display: -webkit-box;
@@ -689,10 +692,39 @@ a {
 .m-boxE {
   background-color: rgba(129, 228, 237, 0.32);
   border: 1px solid #2aacc8;
-  margin-top: 40px;
-  margin-top: 2.5rem;
-  padding: 38px 32px;
-  padding: 2.375rem 2rem; }
+  display: -webkit-box;
+  /* Chrome 20-, iOS 6-, Safari 3.1  -6 */
+  display: -webkit-flex;
+  /* Chrome 21 + */
+  display: -moz-box;
+  /* FF 19- */
+  display: -moz-flex;
+  /* FF 20+ */
+  display: -ms-flexbox;
+  /* IE 10 */
+  display: flex;
+  /* FF 20+, Chrome 29+, Opera 12.1, 17+ */
+  -ms-flex-wrap: none;
+  -webkit-flex-wrap: nowrap;
+  /* Chrome 20-, iOS 6-, Safari 3.1 - 6 */
+  flex-wrap: nowrap;
+  /* FF 28+, Chrome 21+, Opera 12.1, 17+, IE 11 */
+  -ms-flex-line-pack: distribute;
+  margin: 40px 0px;
+  margin: 2.5rem 0rem;
+  padding: 22px 32px 16px;
+  padding: 1.375rem 2rem 1rem; }
+  .m-boxE__sectionA .m-boxE__sectionB {
+    display: inline-block; }
+  .m-boxE__sectionA {
+    width: 600px;
+    width: 37.5rem; }
+  .m-boxE__sectionB {
+    padding-top: 20px;
+    padding-top: 1.25rem;
+    text-align: right;
+    width: 320px;
+    width: 20rem; }
 
 .m-paragraph, .m-paragraph--medium {
   font-size: 13px;
@@ -704,7 +736,9 @@ a {
   margin-bottom: 1.875rem; }
   .m-paragraph--medium {
     font-size: 16px;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 25px;
+    line-height: 1.5625rem; }
 
 .m-title, .m-title__iconLeft, .m-title__iconLeft--clean, .m-title__iconLeft--responsive, .m-title__iconLeft--fully, .m-title__iconLeft--ready, .m-title__iconLeft--latest, .m-title__iconLeft--testimonials, .m-title__iconLeft--clients {
   position: relative; }
@@ -774,6 +808,35 @@ a {
 [disabled] + label {
   cursor: not-allowed; }
 
+.m-button, .m-button--download {
+  border: none;
+  display: inline-block;
+  position: relative; }
+  .m-button--download {
+    background-color: #7de1eb;
+    background: -webkit-linear-gradient(to bottom, rgba(125, 225, 235, 0.6), #4fc3d7);
+    background: -moz-linear-gradient(to bottom, rgba(125, 225, 235, 0.6), #4fc3d7);
+    background: -ms-linear-gradient(to bottom, rgba(125, 225, 235, 0.6), #4fc3d7);
+    background: -o-linear-gradient(to bottom, rgba(125, 225, 235, 0.6), #4fc3d7);
+    background: linear-gradient(to bottom, rgba(125, 225, 235, 0.6), #4fc3d7);
+    border: 1px solid #2aacc8;
+    border-radius: 8px;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    min-height: 60px;
+    min-height: 3.75rem;
+    min-width: 240px;
+    min-width: 15rem;
+    padding: 22px 20px 22px 72px;
+    padding: 1.375rem 1.25rem 1.375rem 4.5rem; }
+    .m-button--download:before {
+      content: url("../../image/icons/iconDownload.png");
+      left: 18px;
+      left: 1.125rem;
+      position: absolute;
+      top: 15px;
+      top: 0.9375rem; }
+
 .s-slideShowActive {
   opacity: 1;
   position: relative;
@@ -782,13 +845,13 @@ a {
 .s-labelActive {
   background-color: #fff; }
 
-.e-clearfix, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD {
+.e-clearfix, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxE {
   display: block; }
-  .e-clearfix:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD:before, .e-clearfix:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD:after {
+  .e-clearfix:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD:before, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxE:before, .e-clearfix:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxE:after {
     content: " ";
     display: table;
     visibility: hidden; }
-  .e-clearfix:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD:after {
+  .e-clearfix:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .l-navbar:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxA:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxB__slideBox:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxC:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD:after, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxE:after {
     clear: both;
     height: 0; }
 
@@ -818,4 +881,7 @@ a {
   float: left; }
 
 .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxD__wrapper {
+  float: left; }
+
+.no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxE__sectionA, .no-flexbox.no-flexboxtweener.no-flexboxlegacy .m-boxE__sectionB {
   float: left; }

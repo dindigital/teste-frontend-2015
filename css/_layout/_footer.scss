@@ -1,0 +1,10 @@
+//imports
+@import '_utilities/_variables';
+@import '_utilities/_mixins';
+@import '_utilities/_functions';
+
+.l-footer {
+  background-color: $bgColor;
+  @include box-shadow(null, 0 0 1px $blackColor);
+  @include rem(min-height, 320);
+}

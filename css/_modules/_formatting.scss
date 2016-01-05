@@ -11,7 +11,8 @@
 
   &--medium{
     @extend .m-paragraph;
-  @include font-size(16);
+    @include font-size(16);
+    @include rem(line-height, 25);
   }
 }
 

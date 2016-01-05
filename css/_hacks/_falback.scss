@@ -56,4 +56,11 @@
       float: left;
     }
   }
+
+  .m-boxE {
+    @extend .e-clearfix;
+
+    &__sectionA,
+    &__sectionB { float: left;}
+  }
 }
