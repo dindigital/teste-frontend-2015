@@ -1,0 +1,25 @@
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 700;
+
+// Base Font
+$base-font-family: Arial, sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 12px;
+$base-line-height: 1.35em;
+
+// Decorative Font
+$brand-font-family: "Lato";
+$brand-line-height: $base-line-height;
+
+// Headings
+$header-font-weight: $bold;
+
+// Colors
+$brand-color: $color-primary;
+
+// Buttons
+$button-padding: 10px 20px;
+$button-font-size: 16px;
+$button-border-width: 1px;

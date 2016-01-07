@@ -1,0 +1,16 @@
+.header {
+	background: $color-gray;
+	padding: 10px 0;
+
+	@extend %clearfix;
+}
+
+.logo {
+	float: left;
+	margin: 10px 0 0 200px;
+}
+
+.main-nav {
+	float: right;
+	margin: 20px 100px 0 0;
+}

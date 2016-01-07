@@ -1,0 +1,8 @@
+.button{
+	@extend %button;
+	@include bislite-button-theme( $color-primary );
+
+	&--secondary {
+		@include bislite-button-theme($color-secondary);
+	}
+}

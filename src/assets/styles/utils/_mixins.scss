@@ -1,0 +1,10 @@
+@mixin bislite-button-theme($color, $color-text-hover: $color-light) {
+	color: $color;
+	border-color: $color;
+	background-color: transparent;
+
+	&:hover {
+		color: $color-text-hover;
+		background-color: $color;
+	}
+}

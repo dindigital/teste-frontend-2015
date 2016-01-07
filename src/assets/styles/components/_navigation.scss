@@ -1,0 +1,51 @@
+.menu {
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	text-transform: uppercase;
+
+	&__item {
+		margin-left: 10px;
+		display: inline-block;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	.has-submenu {
+
+			&:after{
+				content: '';
+				display: inline-block;
+				background: url('assets/img/arrow_down.png');
+				width: 8px;
+				height: 6px;
+			}
+
+			&:hover {
+
+				.submenu {
+					display: block;
+				}
+			}
+		}
+
+	&__link {
+		padding: 10px 20px;
+
+		&:hover, &--active {
+			border-top: 5px solid $color-primary;
+		}
+	}
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	&__item {
+
+	}
+}
