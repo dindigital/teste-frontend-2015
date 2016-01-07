@@ -1,0 +1,14 @@
+//imports
+@import '../_utilities/_variables';
+@import '../_utilities/_mixins';
+
+//elementos escondidos por padrão
+[hidden] {
+  display: none;
+}
+
+// elementos desabilitados
+[disabled],
+[disabled] + label {
+  cursor: not-allowed;
+}

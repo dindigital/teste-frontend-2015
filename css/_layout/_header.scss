@@ -1,0 +1,15 @@
+//imports
+@import '_utilities/_variables';
+@import '_utilities/_mixins';
+@import '_utilities/_functions';
+
+//header
+.l-header {
+  background-color: $bgColor;
+  @include box-shadow(null, 0 0 1px $blackColor);
+}
+
+
+.l-navbar {
+  @include flexbox-container(flex, null, nowrap, null, center, null);
+}

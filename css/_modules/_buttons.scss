@@ -1,0 +1,34 @@
+//imports
+@import '_utilities/_variables';
+@import '_utilities/_mixins';
+@import '_utilities/_functions';
+//buttons
+
+.m-button {
+  border: none;
+  display: inline-block;
+  position: relative;
+
+  &--download {
+    @extend .m-button;
+    background-color: $blueColor2;
+    background: -webkit-linear-gradient(to bottom, rgba($blueColor2, .6), $blueColor3);
+    background: -moz-linear-gradient(to bottom, rgba($blueColor2, .6), $blueColor3);
+    background: -ms-linear-gradient(to bottom, rgba($blueColor2, .6), $blueColor3);
+    background: -o-linear-gradient(to bottom, rgba($blueColor2, .6), $blueColor3);
+    background: linear-gradient(to bottom, rgba($blueColor2, .6), $blueColor3);
+    border: 1px solid $blueColor;
+    @include rem(border-radius, 8);
+    font-weight: bold;
+    @include rem(min-height, 60);
+    @include rem(min-width, 240);
+    @include rem(padding, 22 20 22 72);
+
+    &:before {
+      content: url('../../image/icons/iconDownload.png');
+      @include rem(left, 18);
+      position: absolute;
+      @include rem(top, 15);
+    }
+  }
+}

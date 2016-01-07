@@ -1,0 +1,17 @@
+//imports
+@import '_utilities/_variables';
+@import '_utilities/_mixins';
+@import '_utilities/_functions';
+
+.m-logo {
+  &__header {
+    display: inline-block;
+    @include rem(padding, 38 0);
+    position: relative;
+    vertical-align: middle;
+  }
+
+  &__link {
+    display: inline-block;
+  }
+}

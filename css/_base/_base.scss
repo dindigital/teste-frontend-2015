@@ -1,0 +1,57 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+// Light reset
+html,
+body,
+blockquote,
+form {
+  margin: 0;
+  padding: 0;
+}
+
+// Remove unwanted borders
+form,
+fieldset {
+  border: none;
+}
+
+// Consistency between browsers
+abbr {
+  cursor: help;
+  border-bottom: .063rem dotted #bbb;
+}
+
+
+/* font-weight normal: 400, semi-bold: 500, bold: 700 and lighter: 300 */
+
+//@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,500,700);
+html {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  &:visited {
+    color: inherit;
+  }
+}
