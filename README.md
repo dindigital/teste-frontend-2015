@@ -52,7 +52,7 @@ Não é necessário montar todas as páginas. O objetivo é transmitir na montag
 - Fazer a montagem das páginas
 - Fazer um pull request quando finalizar
 
-# Boa sorte
+## Boa sorte
 ## Muito obrigado pelo interesse em participar
 
 ![Home](https://raw.githubusercontent.com/dindigital/teste-frontend-2015/master/layouts/business-website-home-psd-template.jpg)
