@@ -1,0 +1,25 @@
+{
+  "name": "frontendtest",
+  "description": "Test built to showcase frontend coding skills",
+  "main": "index.js",
+  "authors": [
+    "Carlos Eduardo Angeline"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "amd"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "OwlCarouselBower": "~1.3.4"
+  }
+}
