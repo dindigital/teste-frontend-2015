@@ -16,28 +16,42 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">Você está usando um navegador <strong>obsoleto</strong>. Por favor <a href="http://browsehappy.com/">atualize seu navegador</a> para uma melhor experiência.</p>
         <![endif]-->
-        <header class="header">
-            <div class="logo"><a href="//" title="Voltar à home"><img src="assets/img/logo.png" alt=""></a></div>
-            <nav class="main-nav">
-                <ul class="menu top-menu">
-                        <li class="menu__item"><a href="//" class="menu__link menu__link--active">Home</a></li>
-                        <li class="menu__item"><a href="//about-us.html" class="menu__link">About Us</a></li>
-                        <li class="menu__item has-submenu"><a href="//services.html" class="menu__link">Services</a>
-                            <ul class="submenu">
-                                <li class="submenu__item"><a href="#" class="submenu__link">Web Design</a></li>
-                                <li class="submenu__item"><a href="#" class="submenu__link">Wordpress Design</a></li>
-                                <li class="submenu__item"><a href="#" class="submenu__link">Mobile App Development</a></li>
-                                <li class="submenu__item"><a href="#" class="submenu__link">Internet Marketing</a></li>
-                                <li class="submenu__item"><a href="#" class="submenu__link">Social Media Management</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu__item"><a href="//portfolio.html" class="menu__link">Portfolio</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Contact Us</a></li>
-                    </ul>
-            </nav>
-        </header>
+        <div class="site-container">
+            <div class="site-pusher">
+                <header class="header">
 
+                    <nav class="main-nav">
+                        <a href="#" class="header__icon" id="header__icon"></a>
+                        <a href="//" class="header__logo" title="Voltar à home">Bislite</a>
+
+                        <ul class="menu top-menu">
+                                <li class="menu__item menu__item--active"><a href="//" class="menu__link menu__link">Home</a></li>
+                                <li class="menu__item"><a href="//about-us.html" class="menu__link">About Us</a></li>
+                                <li class="menu__item has-submenu"><a href="//services.html" class="menu__link">Services</a>
+                                    <ul class="submenu">
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Web Design</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Wordpress Design</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Mobile App Development</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Internet Marketing</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__link">Social Media Management</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item"><a href="//portfolio.html" class="menu__link">Portfolio</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link">Contact Us</a></li>
+                            </ul>
+                    </nav>
+                </header>
+
+                <div class="site-content">
+                    <div class="container">
+
+                    </div> <!-- END container -->
+                </div> <!-- END site-content -->
+                <div class="site-cache" id="site-cache"></div>
+                <div id="mobile-indicator"></div>
+            </div> <!-- END site-pusher -->
+        </div> <!-- END site-container -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="assets/vendor/jquery/dist/jquery.min.js"><\/script>')</script>

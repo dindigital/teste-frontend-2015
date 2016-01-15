@@ -1,16 +1,86 @@
 .header {
 	background: $color-gray;
+	border-bottom: 1px solid $color-gray/1.1;
+	box-shadow: 0 0 3px 1px $color-gray;
 	padding: 10px 0;
+
+	&__icon {
+		display: none;
+	}
+
+	&__logo {
+		text-indent: -9999px;
+		background: url('../img/logo.png') center center no-repeat;
+		width: 153px;
+		height: 54px;
+
+		display: inline-block;
+		margin-top: .5em;
+	}
 
 	@extend %clearfix;
 }
 
-.logo {
-	float: left;
-	margin: 10px 0 0 200px;
+.main-nav{
+	margin: 0 auto;
+	width: 80%;
 }
 
-.main-nav {
+ .menu {
 	float: right;
-	margin: 20px 100px 0 0;
+}
+
+/* ==================================== *\
+		Media Queries for Header
+	#1 - Tablet
+	#2 - Medium
+\* ====================================	*/
+
+@include respond-to('tablet') {
+
+	.header {
+		position: static;
+
+		&__icon {
+			position: relative;
+			display: block;
+			float: left;
+			width: 50px;
+			height: 50px;
+			margin-right: 1.25rem;
+
+			// background: $color-dark;
+
+			&:after {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 1rem;
+				height: 0;
+				top: .5rem;
+				left: 1rem;
+
+				@include box-shadow(0 10px 0 1px $color-primary, 0 16px 0 1px $color-primary, 0 22px 0 1px $color-primary );
+			}
+		}
+
+		&__logo {
+			width: 100px;
+			height: 25px;
+			margin-top: .75rem;
+			background: url('../img/logo-min.png') center center no-repeat;
+		}
+	}
+
+	.main-nav {
+		width: 100%;
+		padding: 0 1rem;
+		box-sizing: border-box;
+	}
+}
+
+@include respond-to('medium') {
+	.main-nav {
+		width: 85%;
+	}
 }

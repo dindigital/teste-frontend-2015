@@ -23,3 +23,20 @@ $brand-color: $color-primary;
 $button-padding: 10px 20px;
 $button-font-size: 16px;
 $button-border-width: 1px;
+
+// Transitions
+$base-transition: 0.25s ease-in-out;
+
+// Sizes(Heights and widths)
+$responsive-menu-width: 250px;
+
+// Screen Sizes and Devices Dimensions Breakpoints
+$breakpoints: (
+	'phone'	 : ( max-width: 799px  ),
+	'tablet' : ( max-width: 1024px ),
+	'desktop': ( max-width: 1368px ),
+	'small'  : ( min-width: 800px  ),
+	'medium' : ( min-width: 992px  ),
+	'large'  : ( min-width: 1200px ),
+	'wide'	 : ( min-width: 1369px )
+	) !default;

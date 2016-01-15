@@ -10,6 +10,7 @@ var gulp         = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     minifyCss    = require('gulp-minify-css'),
     sass         = require('gulp-sass'),
+    compass      = require('compass-importer'),
     rename       = require('gulp-rename'),
     kraken       = require('gulp-kraken'),
     sourcemaps   = require('gulp-sourcemaps'),
@@ -56,7 +57,7 @@ gulp.task( 'scripts', function() {
 gulp.task( 'styles', function() {
     gulp.src( config.src.styles )
         /*.pipe(sourcemaps.init())*/
-            .pipe(sass().on('error', sass.logError))
+            .pipe(sass({importer: compass}).on('error', sass.logError))
         /*.pipe(sourcemaps.write(config.dest.maps))*/
         /*.pipe(autoprefixer({ browsers: ['last 3 versions'] }))*/
         .pipe(gulp.dest(config.dest.css))
@@ -99,13 +100,6 @@ gulp.task( 'vendor', function() {
     .pipe(gulp.dest('assets/styles'));
 }); */
 
-// Importing Font-Awesome
-// gulp.task('icons', function(){
-//   return gulp.src('./vendor/font-awesome/fonts/**.*')
-//     .pipe(gulp.dest('./assets/fonts'));
-// });
-
-
 gulp.task('serve', ['styles', 'html', 'scripts'], function() {
 
     browserSync.init({
@@ -114,7 +108,7 @@ gulp.task('serve', ['styles', 'html', 'scripts'], function() {
     });
 
     gulp.watch(config.src.styles, ['styles']);
-    gulp.watch(config.src.html).on('change', browserSync.reload);
+    gulp.watch(config.src.html, ['html']);
     gulp.watch(config.src.scripts, ['scripts']);
 });
 
