@@ -37,4 +37,16 @@
 		}
 	});
 
+	$(document).ready( function(){
+
+		/* FlexSlider Initialization */
+		var mainSlider = $('#main-slider');
+		mainSlider.flexslider({
+			animation: 'slide',
+			directionNav: false,
+			slideshowSpeed: 3000,
+			pauseOnHover: false
+		});
+	});
+
 })(jQuery);

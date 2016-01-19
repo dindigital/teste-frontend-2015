@@ -32,11 +32,12 @@ $responsive-menu-width: 250px;
 
 // Screen Sizes and Devices Dimensions Breakpoints
 $breakpoints: (
-	'phone'	 : ( max-width: 799px  ),
+	'phone-portrait'  : ( max-width: 480px ),
+	'phone-landscape' : ( max-width: 799px  ),
 	'tablet' : ( max-width: 1024px ),
 	'desktop': ( max-width: 1368px ),
 	'small'  : ( min-width: 800px  ),
-	'medium' : ( min-width: 992px  ),
+	'medium' : ( min-width: 1025px  ),
 	'large'  : ( min-width: 1200px ),
 	'wide'	 : ( min-width: 1369px )
 	) !default;

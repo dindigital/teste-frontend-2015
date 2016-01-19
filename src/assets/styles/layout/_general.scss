@@ -3,7 +3,6 @@
 \*------------------------------*/
 
 .container {
-	margin: 0 20px;
 	@include clearfix;
 }
 
@@ -45,7 +44,7 @@
 
 	.site-content {
 		position: absolute;
-		top: 71px;
+		top: 3.7rem;
 		right: 0;
 		left: 0;
 		bottom: 0;

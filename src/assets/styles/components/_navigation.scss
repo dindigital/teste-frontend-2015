@@ -61,6 +61,8 @@
 	padding: 5px;
 	border-bottom: 5px solid $color-primary;
 
+	z-index: 10;
+
 	&__item {
 		padding: 7px 10px;
 		border-bottom: 1px solid $color-gray;
@@ -157,7 +159,7 @@
 
 		&__item {
 			&:first-child{
-				border-top: 1px solid $color-gray;;
+				border-top: 1px solid $color-gray;
 			}
 		}
 

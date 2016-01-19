@@ -139,4 +139,4 @@ gulp.task('watch', ['browser-sync'], function() {
   gulp.watch([gulp.src.html], ['html']);
 });
 
-gulp.task('default', ['html', 'scripts', 'styles', 'images', 'serve']);
+gulp.task('default', ['html', 'scripts', 'styles', 'images', 'vendor', 'serve']);

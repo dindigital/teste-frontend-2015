@@ -1,0 +1,128 @@
+/* =============================== *\
+   	Home Specific Styles
+\* =============================== */
+
+.slider-wrapper {
+	display: block;
+	position: relative;
+	padding: 1.5rem 0 3rem;
+	background-color: $color-primary-light;
+}
+
+.main-slider {
+	margin: 0 auto;
+	width: 75%;
+	border: none;
+
+	.slide {
+		width: 100%;
+		display: block;
+		position: relative;
+
+		&--orange {
+			background-color: $slider-orange;
+		}
+
+		&--red {
+			background-color: $slider-red;
+		}
+
+		&--yellow {
+			background-color: $slider-yellow;
+		}
+
+		&--grey {
+			background-color: $slider-grey;
+		}
+
+		&__text {
+			position: absolute;
+			font-size: 50px;
+			max-width: 300px;
+			top: 50px;
+			left: 50px;
+			line-height: 1.2em;
+
+			color: #fff;
+			font-family: $brand-font-family;
+			font-weight: 700;
+
+			animation: 0.5s bounceOut;
+		}
+
+		img {
+			float: right;
+			width: auto;
+		}
+	}
+}
+
+/* FlexSlider Resets */
+
+.flexslider {
+	.slides {
+		.flex-active-slide{
+			.slide__text{
+				animation: 0.75s bounceIn;
+			}
+		}
+	}
+}
+
+.flex-control-paging {
+	li {
+		a {
+			width: 0.85rem;
+			height: 0.85rem;
+			box-shadow: none;
+			background: rgba(98, 98, 98, 0.4);
+			margin-right: 0.75rem;
+			&.flex-active {
+				background: #fff;
+			}
+		}
+	}
+
+}
+
+/* ==================================== *\
+		Media Queries for Header
+	#1 - Tablet
+	#2 - Medium
+\* ====================================	*/
+
+@include respond-to('tablet') {
+	.main-slider {
+		.slide {
+			&__text {
+				font-size: 1.75rem;
+				margin: 0;
+				left: 1rem;
+				top: 1rem;
+				max-width: 34%;
+			}
+
+			&__image {
+				max-width: 60%;
+			}
+		}
+	}
+}
+
+@include respond-to('phone-portrait') {
+	.main-slider {
+		.slide {
+			&__text {
+				font-size: 1rem;
+
+				left: 0.75rem;
+				top: 0.75rem;
+				max-width: 35%;
+			}
+
+			&__image {
+				max-width: 60%;
+			}
+		}
+	}
+}
