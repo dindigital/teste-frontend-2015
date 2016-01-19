@@ -1,5 +1,6 @@
 /* =============================== *\
    	Home Specific Styles
+   	#Slider
 \* =============================== */
 
 .slider-wrapper {
@@ -82,13 +83,88 @@
 			}
 		}
 	}
-
 }
+
+/* =============================== *\
+   	#Features Section
+\* =============================== */
+.section--features {
+	background-color: #e8ebf1;
+}
+
+.feature {
+
+	&__subtitle {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__icon{
+		display: inline-block;
+		content: '';
+		width: 45px;
+		height: 40px;
+		background-image: url('../img/icons.png');
+		background-repeat: no-repeat;
+
+		&--pencil {
+			background-position: 0 0;
+		}
+
+		&--responsive {
+			background-position: -45px 0;
+		}
+
+		&--layers {
+			background-position: -90px 0;
+		}
+
+		&--plane {
+			background-position: -135px 0;
+		}
+	}
+	&__info {
+		margin-top: 0;
+	}
+
+	&__link {
+		color: $color-primary;
+		transition: $base-transition;
+
+		font-size: 14px;
+		padding-left: 12px;
+		background: url('../img/arrow_right.png') 0 center no-repeat;
+
+		&:hover {
+			color: darken($color-primary, 10);
+			transition: $base-transition;
+		}
+	}
+}
+
+.subtitle {
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 700;
+
+	color: #000;
+}
+
+.info {
+	font-size: 13px;
+}
+
+/* =============================== *\
+   	#Latest Works Section
+\* =============================== */
+
+
+
 
 /* ==================================== *\
 		Media Queries for Header
 	#1 - Tablet
-	#2 - Medium
+	#2 - Phone-portrait
 \* ====================================	*/
 
 @include respond-to('tablet') {
@@ -111,18 +187,42 @@
 
 @include respond-to('phone-portrait') {
 	.main-slider {
+		width: 94%;
+
 		.slide {
 			&__text {
-				font-size: 1rem;
+				font-size: 1.2rem;
 
-				left: 0.75rem;
-				top: 0.75rem;
+				left: 0.85rem;
+				top: 0.85rem;
 				max-width: 35%;
 			}
 
 			&__image {
 				max-width: 60%;
 			}
+		}
+	}
+
+	.feature {
+		margin-bottom: 24px;
+
+		&__subtitle {
+			font-size: 16px;
+		    margin: .5rem .15rem;
+		}
+
+		&__info {
+			font-size: 14px;
+			text-align: justify;
+			padding: 0 .5rem;
+			box-sizing: border-box;
+			margin: 0 0 5px 0;
+		}
+
+		&__link {
+			font-size: 15px;
+			margin: 0 0 10px 4%;
 		}
 	}
 }

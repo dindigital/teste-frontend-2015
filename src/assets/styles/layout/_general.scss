@@ -6,6 +6,11 @@
 	@include clearfix;
 }
 
+.section {
+	padding: 40px 12.5%;
+	color: $color-primary-dark;
+}
+
 #mobile-indicator {
 	display: none;
 }
@@ -50,5 +55,11 @@
 		bottom: 0;
 		padding-top: 0;
 		overflow-y: scroll;
+	}
+}
+
+@include respond-to('phone-portrait'){
+	.section {
+		padding: 40px 4%;
 	}
 }
