@@ -85,6 +85,14 @@
 	}
 }
 
+.section {
+	.subtitle {
+		margin: 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
 /* =============================== *\
    	#Features Section
 \* =============================== */
@@ -157,10 +165,10 @@
 /* =============================== *\
    	#Latest Works Section
 \* =============================== */
-.section--latest-works{
+.section--latest-works {
 	background: #fff;
 
-	.subtitle{
+	.subtitle {
 		display: inline-block;
 		padding-left: 25px;
 		background: url('../img/cursor.png') 0 center no-repeat;
@@ -259,6 +267,114 @@
 		margin-left: -40px;
 	}
 }
+
+/* =============================== *\
+   	#Testimonials Section
+\* =============================== */
+.section--testimonials {
+	padding-right: 40px;
+
+	.subtitle {
+		display: inline-block;
+	}
+
+	.info, .signature {
+		font-size: 14px;
+		line-height: 1.75em;
+	}
+
+	.signature {
+		display: block;
+		margin-top: 20px;
+	}
+}
+
+.section__icon {
+	display: inline-block;
+	height: 24px;
+	width: 25px;
+	margin-right: 5px;
+	background: url('../img/subtitle-icons.png') no-repeat;
+
+	&--balloon {
+		background-position: -92px 0;
+	}
+
+	&--clients {
+		background-position: 0 0;
+	}
+
+	&--mail {
+		background-position: -31px 0;
+	}
+
+	&--cursor {
+		width: 14px;
+		background-position: -66px 0;
+	}
+}
+
+/* =============================== *\
+   	#Our Clients Section
+\* =============================== */
+.master-section {
+	width: 80%;
+	margin: 0 auto;
+
+	.section {
+		padding: 15px 30px;
+	}
+
+}
+
+.row {
+
+}
+
+.section--our-clients {
+	padding-left: 40px;
+}
+
+.clients-wrapper {
+	margin: 15px 0 0 24px;
+
+	.row {
+
+	}
+}
+
+.client {
+	float: left;
+	margin: 0;
+	width: 150px;
+	height: 95px;
+
+	position: relative;
+
+	&__box {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		border: 1px solid #ddd;
+
+		&:hover {
+			border: 1px solid #bbb;
+			box-shadow: 0 1px 30px #999 inset;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+
+
+
 
 /* ==================================== *\
 		Media Queries for Header

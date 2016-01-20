@@ -55,7 +55,7 @@
 			var mgL = ((width / 2) + 30) * ($this.hasClass('control--prev') ? 0 : -1);
 			$carouselBelt.animate({
 	          marginLeft: mgL
-	        }, 250);
+	        }, 500, "easeInOutQuad");
 		}
 
 
