@@ -22,7 +22,49 @@
 		}
 	});
 
-	/* Responsive Events Reaction */
+/* =============================== *\
+	 #Carousel
+\* =============================== */
+
+	/* Caching */
+
+	var $carouselControls  = $('#carousel-controls'),
+		$carousel 		 = $('#carousel'),
+		$carouselBelt	 = $carousel.find('.carousel__belt'),
+		$carouselProjects = $carouselBelt.find('.project');
+
+	var $carouselPrev = $carouselControls.find('#carousel-prev'),
+		$carouselNext = $carouselControls.find('#carousel-next');
+
+	if( $carouselProjects.length > 4 ) {
+		console.log("O tamanho é " + $carouselProjects.length);
+
+		$carouselBelt.css('width', $carouselProjects.length * 26.5 + '%');
+	}
+
+	$carouselControls.find('.control').click( function(ev) {
+		ev.preventDefault();
+
+		var $this = $(this);
+
+		var total = ($carouselBelt.css('width').replace(/px/g, "") * 1) + ($carouselBelt.css('margin-left').replace(/px/g, "") * 1),
+			width = $carousel.css('width').replace(/px/g, "");
+
+		if( total >= width ) {
+
+			var mgL = ((width / 2) + 30) * ($this.hasClass('control--prev') ? 0 : -1);
+			$carouselBelt.animate({
+	          marginLeft: mgL
+	        }, 250);
+		}
+
+
+	});
+
+
+
+
+/* Responsive Events Reaction */
 
 	$(window).resize(function() {
 	    if(this.resizeTO) clearTimeout(this.resizeTO);

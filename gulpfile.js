@@ -57,7 +57,7 @@ gulp.task( 'scripts', function() {
 gulp.task( 'styles', function() {
     gulp.src( config.src.styles )
         /*.pipe(sourcemaps.init())*/
-            .pipe(sass({importer: compass}).on('error', sass.logError))
+            .pipe(sass().on('error', sass.logError))
         /*.pipe(sourcemaps.write(config.dest.maps))*/
         /*.pipe(autoprefixer({ browsers: ['last 3 versions'] }))*/
         .pipe(gulp.dest(config.dest.css))
@@ -133,7 +133,7 @@ gulp.task('prod', ['sassdoc'], function () {
         .pipe(gulp.dest(config.dest.img));
 });*/
 
-gulp.task('watch', ['browser-sync'], function() {
+gulp.task('watch', function() {
   gulp.watch([gulp.src.styles], ['styles']);
   gulp.watch([gulp.src.scripts], ['scripts']);
   gulp.watch([gulp.src.html], ['html']);
