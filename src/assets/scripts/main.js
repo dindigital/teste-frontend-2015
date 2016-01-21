@@ -39,8 +39,10 @@
 	if( $carouselProjects.length > 4 ) {
 		console.log("O tamanho é " + $carouselProjects.length);
 
-		$carouselBelt.css('width', $carouselProjects.length * 26.5 + '%');
+		$carouselBelt.css('width', $carouselProjects.length * 275 + 'px');
 	}
+
+	var mgL = 0;
 
 	$carouselControls.find('.control').click( function(ev) {
 		ev.preventDefault();
@@ -50,9 +52,12 @@
 		var total = ($carouselBelt.css('width').replace(/px/g, "") * 1) + ($carouselBelt.css('margin-left').replace(/px/g, "") * 1),
 			width = $carousel.css('width').replace(/px/g, "");
 
-		if( total >= width ) {
+			console.log('Total carousel size: ' + total);
+			console.log('Carousel width: ' + width);
 
-			var mgL = ((width / 2) + 30) * ($this.hasClass('control--prev') ? 0 : -1);
+		if( total >= width ) {
+			mgL = ((width / 2) + (30 * ($carouselProjects.length - 4))) * ($this.hasClass('control--prev') ? 0 : -1);
+			console.log('mgL now should be ' + mgL);
 			$carouselBelt.animate({
 	          marginLeft: mgL
 	        }, 500, "easeInOutQuad");

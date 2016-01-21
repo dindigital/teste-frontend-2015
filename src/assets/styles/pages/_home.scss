@@ -105,6 +105,7 @@
 	&__subtitle {
 		display: inline-block;
 		vertical-align: top;
+		line-height: 40px;
 	}
 
 	&__icon{
@@ -187,6 +188,7 @@
 	width: 100%;
 	padding-bottom: 20px;
 	border-bottom: 1px solid $color-gray;
+	height: 165px;
 	overflow: hidden;
 
 	&__belt {
@@ -221,6 +223,7 @@
 	width: 220px;
 	height: 160px;
 	margin-right: 50px;
+	margin-bottom: 20px;
 
 	&__image {
 		max-width: 100%;
@@ -317,52 +320,26 @@
 /* =============================== *\
    	#Our Clients Section
 \* =============================== */
-.master-section {
-	width: 80%;
-	margin: 0 auto;
-
-	.section {
-		padding: 15px 30px;
-	}
-
-}
-
-.row {
-
-}
-
 .section--our-clients {
 	padding-left: 40px;
 }
 
 .clients-wrapper {
-	margin: 15px 0 0 24px;
-
-	.row {
-
-	}
+	margin: 15px 0 0;
 }
 
 .client {
 	float: left;
 	margin: 0;
-	width: 150px;
-	height: 95px;
+	width: 160px;
+	height: 98px;
+	border: 1px solid #eee;
 
 	position: relative;
 
 	&__box {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		border: 1px solid #ddd;
+		border: 1px solid #eee;
 
-		&:hover {
-			border: 1px solid #bbb;
-			box-shadow: 0 1px 30px #999 inset;
-		}
 	}
 
 	&__image {
@@ -372,14 +349,67 @@
 }
 
 
+/* =============================== *\
+   	#Download Call-to-action
+\* =============================== */
+.master-call {
+	width: 75%;
+	margin: 30px auto 10px;
+	padding: 30px;
+	line-height: 25px;
+	border: 1px solid $color-primary-light;
 
+	position: relative;
+	box-sizing: border-box;
+	background: $color-gray-line;
 
+	&__text {
+		width: 65%;
+		font-size: 16px;
+		display: inline-block;
+		margin: 0 1em 0;
+		color: $color-primary-dark;
+	}
 
+	&__button {
+		background: url('../img/download-button.png') 0 0 no-repeat;
+		border: none;
+		display: inline-block;
+		width: 240px;
+		height: 60px;
+		padding: 0;
+		text-indent: 50px;
+		color: #000;
+
+		transition: color 0.15s linear;
+
+		&:hover {
+			background-color: transparent;
+			color: #fff;
+			transition: color 0.15s linear;
+		}
+
+		&-text{
+			line-height: 60px;
+		}
+
+	}
+}
+
+.button-wrapper {
+	display: inline-block;
+	width: 28%;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	text-align: center;
+}
 
 /* ==================================== *\
 		Media Queries for Header
 	#1 - Tablet
-	#2 - Phone-portrait
+	#2 - Phone Landscape
+	#3 - Phone-portrait
 \* ====================================	*/
 
 @include respond-to('tablet') {
@@ -397,6 +427,17 @@
 				max-width: 60%;
 			}
 		}
+	}
+
+	.feature {
+		width: 50%;
+		margin-bottom: 20px;
+	}
+}
+
+@include respond-to('phone-landscape') {
+	.feature {
+		width: 100%;
 	}
 }
 

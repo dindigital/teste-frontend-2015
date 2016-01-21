@@ -7,8 +7,47 @@
 }
 
 .section {
-	padding: 40px 12.5%;
-	color: $color-primary-dark;
+	padding: 40px;
+	color: darken($color-primary-dark, 10	);
+}
+
+.master-section {
+
+	padding: 24px 0;
+
+	>.section {
+		width: 80%;
+		margin: 0 auto;
+		padding: 15px 30px;
+		box-sizing: border-box;
+	}
+
+	&--muted {
+		background: $color-gray;
+	}
+}
+
+.col {
+	.section {
+		padding: 0;
+		width: 100%;
+		box-sizing: border-box;
+
+		&--testimonials {
+			padding-right: 20px;
+			margin-left: -30px;
+		}
+
+		&--our-clients {
+			margin-left: -10px;
+		}
+	}
+}
+
+.row--centered {
+	margin: 0 auto;
+	width: 80%;
+
 }
 
 .text-muted {

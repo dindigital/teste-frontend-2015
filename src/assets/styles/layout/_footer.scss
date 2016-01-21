@@ -1,0 +1,92 @@
+.footer {
+	margin-top: 30px;
+	background: $color-gray;
+	border-top: 1px solid darken($color-gray, 5);
+	font-size: 14px;
+	padding: 30px 0px;
+	color: $color-primary-dark;
+
+	&-wrapper {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	&__link {
+		display: block;
+		margin-bottom: 5px;
+		transition: $base-transition-linear;
+		color: $color-primary-dark;
+
+		&:hover {
+			color: $color-primary;
+			transition: $base-transition-linear;
+		}
+	}
+
+	&__subtitle {
+
+	}
+
+	&__section {
+
+		margin: 0 10px 0 0;
+
+		&--links {
+			margin: 0 1.2em 0 0.3em;
+
+			.col:first-child {
+
+			}
+		}
+	}
+}
+
+.social {
+
+	&__link {
+
+		display: inline-block;
+		width: 47px;
+		height: 52px;
+		background: url('../img/social-icons.png') no-repeat;
+		margin: 0 30px 5px 0;
+
+		&--facebook {
+
+		}
+
+		&--dribbble {
+			background-position: -48px 0;
+		}
+
+		&--pinterest {
+			background-position: -95px 0;
+			width: 49px;
+		}
+
+		&--linkedin {
+			background-position: 0 -52px;
+		}
+
+		&--skype {
+			background-position: -48px -52px;
+		}
+
+		&--share {
+			background-position: -95px -52px;
+			width: 49px;
+		}
+	}
+}
+
+.soft-bold {
+	font-weight: 700;
+	color: $color-primary-dark;
+}
+
+.copyright {
+	font-size: 12px;
+	line-height: 1em;
+	margin: 1em 0 0 30px;
+	float: left;
+}
