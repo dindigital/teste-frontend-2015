@@ -12,7 +12,7 @@
 
 .main-slider {
 	margin: 0 auto;
-	width: 75%;
+	width: 80%;
 	border: none;
 
 	.slide {
@@ -151,18 +151,6 @@
 	}
 }
 
-.subtitle {
-	text-transform: uppercase;
-	font-size: 15px;
-	font-weight: 700;
-
-	color: #000;
-}
-
-.info {
-	font-size: 13px;
-}
-
 /* =============================== *\
    	#Latest Works Section
 \* =============================== */
@@ -171,8 +159,6 @@
 
 	.subtitle {
 		display: inline-block;
-		padding-left: 25px;
-		background: url('../img/cursor.png') 0 center no-repeat;
 		height: 1.5rem;
 		line-height: 1.5rem;
 		margin: 0 0 20px;
@@ -321,30 +307,25 @@
    	#Our Clients Section
 \* =============================== */
 .section--our-clients {
-	padding-left: 40px;
+	padding-left: 0px;
 }
 
 .clients-wrapper {
 	margin: 15px 0 0;
+	line-height: 0;
+	@extend %clearfix;
 }
 
 .client {
 	float: left;
 	margin: 0;
 	width: 160px;
-	height: 98px;
-	border: 1px solid #eee;
-
 	position: relative;
-
-	&__box {
-		border: 1px solid #eee;
-
-	}
 
 	&__image {
 		width: 100%;
 		height: 100%;
+		border: 1px solid #eee;
 	}
 }
 
@@ -353,9 +334,9 @@
    	#Download Call-to-action
 \* =============================== */
 .master-call {
-	width: 75%;
+	width: 80%;
 	margin: 30px auto 10px;
-	padding: 30px;
+	padding: 10px 20px;
 	line-height: 25px;
 	border: 1px solid $color-primary-light;
 
@@ -364,11 +345,14 @@
 	background: $color-gray-line;
 
 	&__text {
-		width: 65%;
 		font-size: 16px;
 		display: inline-block;
-		margin: 0 1em 0;
 		color: $color-primary-dark;
+	}
+
+	&__button-wrapper {
+		text-align: center;
+		margin-top: 30px;
 	}
 
 	&__button {
@@ -414,9 +398,11 @@
 
 @include respond-to('tablet') {
 	.main-slider {
+		width: 90%;
+
 		.slide {
 			&__text {
-				font-size: 1.75rem;
+				font-size: 2.5rem;
 				margin: 0;
 				left: 1rem;
 				top: 1rem;
@@ -430,15 +416,67 @@
 	}
 
 	.feature {
-		width: 50%;
 		margin-bottom: 20px;
+	}
+
+	.section {
+		&--our-clients{
+
+			padding-left: 0;
+		}
+	}
+
+	.client {
+		width: 32%;
+	}
+
+	.master-call {
+		padding: 10px;
+
+		&__text {
+			padding-left: 0;
+			text-align: center;
+
+			margin-bottom: 0px;
+		}
+
+		&__button-wrapper {
+			margin: 15px auto;
+		}
 	}
 }
 
 @include respond-to('phone-landscape') {
-	.feature {
-		width: 100%;
+	.main-slider {
+		.slide {
+			&__text {
+				font-size: 1.75rem;
+			}
+		}
 	}
+
+	.section {
+		margin-bottom: 35px;
+
+		&--testimonials {
+			.signature{
+				margin-top: 0;
+			}
+		}
+
+		&--our-clients {
+			margin-left: -30px;
+		}
+	}
+
+	.client {
+		width: 158px;
+	}
+
+	.master-call {
+		display: none;
+	}
+
 }
 
 @include respond-to('phone-portrait') {
@@ -458,6 +496,10 @@
 				max-width: 60%;
 			}
 		}
+	}
+
+	.master-section {
+		padding: .25em 0;
 	}
 
 	.feature {
@@ -480,5 +522,20 @@
 			font-size: 15px;
 			margin: 0 0 10px 4%;
 		}
+	}
+
+	.section {
+		margin-bottom: .5em;
+		&--testimonials {
+
+		}
+
+		&--our-clients{
+			padding: 0;
+		}
+	}
+
+	.client {
+		width: 32%;
 	}
 }

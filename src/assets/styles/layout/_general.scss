@@ -4,6 +4,7 @@
 
 .container {
 	@include clearfix;
+	background: #fff;
 }
 
 .section {
@@ -13,35 +14,35 @@
 
 .master-section {
 
-	padding: 24px 0;
+	padding: 12px 0;
 
 	>.section {
 		width: 80%;
 		margin: 0 auto;
-		padding: 15px 30px;
+		padding: 15px;
 		box-sizing: border-box;
 	}
 
 	&--muted {
 		background: $color-gray;
 	}
+
+	@extend clearfix;
 }
 
-.col {
-	.section {
-		padding: 0;
-		width: 100%;
-		box-sizing: border-box;
 
-		&--testimonials {
-			padding-right: 20px;
-			margin-left: -30px;
-		}
+.section {
+	padding: 0;
+	width: 100%;
+	box-sizing: border-box;
 
-		&--our-clients {
-			margin-left: -10px;
-		}
+	&--testimonials {
+		margin-left: -15px;
 	}
+}
+
+.clearfixed {
+	@extend %clearfix;
 }
 
 .row--centered {
@@ -54,9 +55,30 @@
 	font-weight: 700;
 }
 
+.subtitle {
+	text-transform: uppercase;
+	font-size: 15px;
+	margin-bottom: 10px;
+	font-weight: 700;
+
+	color: #000;
+}
+
+.info {
+	font-size: 13px;
+}
+
 #mobile-indicator {
 	display: none;
 }
+
+/* ==================================== *\
+	Media Queries for General Styles
+	#1 - Tablet
+	#2 - Phone Landscape
+	#3 - Phone Portrait
+\* ====================================	*/
+
 
 @include respond-to('tablet') {
 
@@ -99,9 +121,19 @@
 		padding-top: 0;
 		overflow-y: scroll;
 	}
+
+	.master-section {
+		>.section {
+			width: 96%;
+		}
+	}
 }
 
-@include respond-to('phone-portrait'){
+@include respond-to('phone-landscape') {
+
+}
+
+@include respond-to('phone-portrait') {
 	.section {
 		padding: 40px 4%;
 	}
