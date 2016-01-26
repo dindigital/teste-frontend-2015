@@ -1,0 +1,44 @@
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 700;
+
+// Base Font
+$base-font-family: Arial, sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 12px;
+$base-line-height: 1.35em;
+
+// Decorative Font
+$brand-font-family: "Lato";
+$brand-line-height: $base-line-height;
+
+// Headings
+$header-font-weight: $bold;
+
+// Colors
+$brand-color: $color-primary;
+
+// Buttons
+$button-padding: 10px 20px;
+$button-font-size: 16px;
+$button-border-width: 1px;
+
+// Transitions
+$base-transition: 0.25s ease-in-out;
+$base-transition-linear: 0.2s linear;
+
+// Sizes(Heights and widths)
+$responsive-menu-width: 250px;
+
+// Screen Sizes and Devices Dimensions Breakpoints
+$breakpoints: (
+	'phone-portrait'  : ( max-width: 480px ),
+	'phone-landscape' : ( max-width: 799px ),
+	'tablet' : ( max-width: 1024px ),
+	'desktop': ( max-width: 1368px ),
+	'small'  : ( min-width: 800px  ),
+	'medium' : ( min-width: 1025px ),
+	'large'  : ( min-width: 1200px ),
+	'wide'	 : ( min-width: 1369px )
+	) !default;

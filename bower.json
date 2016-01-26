@@ -1,0 +1,28 @@
+{
+  "name": "dindigital",
+  "homepage": "https://github.com/dindigital/teste-frontend-2015",
+  "authors": [
+    "James <jhemerson.comercial@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "teste",
+    "dindigital"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.6",
+    "bootstrap-sass": "~3.3.6",
+    "flexslider": "~2.6.0"
+  }
+}

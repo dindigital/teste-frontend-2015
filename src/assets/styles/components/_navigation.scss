@@ -1,0 +1,174 @@
+.menu {
+	font-family: $base-font-family;
+	font-size: $base-font-size * 1.1;
+
+	&__item {
+		margin-left: 10px;
+		padding: 10px 15px;
+		display: inline-block;
+		position: relative;
+
+		font-weight: 700;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:hover, &--active {
+			border-top: 5px solid $color-primary;
+		}
+
+	}
+
+	.has-submenu {
+
+		.menu__link:after{
+			content   :	 '';
+			display   : inline-block;
+			background: url("../img/arrow_down.png") no-repeat 0 center;
+			margin    : 0 10px;
+			width     : .75em;
+			height    : .75em;
+		}
+
+		&:hover {
+
+			&, .submenu{
+				background: $color-light;
+			}
+
+			.menu_link {
+				border-top: 5px solid $color-primary;
+			}
+
+			.submenu {
+				display: block;
+			}
+		}
+	}
+
+	&__link {
+		text-transform: uppercase;
+		display: block;
+	}
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	padding: 5px;
+	border-bottom: 5px solid $color-primary;
+
+	z-index: 10;
+
+	&__item {
+		padding: 7px 10px;
+		border-bottom: 1px solid $color-gray;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	&__link {
+		font-weight: $base-font-weight;
+		display: block;
+		white-space: nowrap;
+
+		&:hover {
+			color: $color-primary;
+			transition: $base-transition;
+		}
+	}
+}
+
+/* ==================================== *\
+		Media Queries for Navigation
+	#1 - Tablet
+	#2 - Medium
+\* ====================================	*/
+
+@include respond-to( 'tablet' ) {
+	.menu {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		margin: 0;
+		background: lighten($color-gray, 5);
+
+		width: $responsive-menu-width;
+
+		@include transform(translateX($responsive-menu-width * -1));
+
+		&__item {
+			display: block;
+			margin-left: 0;
+			padding: 0;
+
+			text-align: center;
+			line-height: 40px;
+
+			border-bottom: 1px solid $color-gray;
+
+			&:hover {
+				.menu__link {
+					padding-top: 0;
+				}
+			}
+
+			&--active {
+				&:hover {
+					.menu__link {
+						padding-top: 5px;
+					}
+				}
+			}
+		}
+
+		&__link{
+			padding: 5px 0;
+		}
+
+		.has-submenu {
+			.menu__link {
+				padding-left: 1.5rem;
+				&:after {
+					background: url('../img/arrow_right.png') 0 center no-repeat;
+				}
+			}
+
+			&:hover{
+				.submenu {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.submenu {
+		width: $responsive-menu-width;
+		position: relative;
+		box-sizing: border-box;
+		padding: 0;
+		line-height: 30px;
+		margin-top: -1.5rem;
+		margin-bottom: 1.6rem;
+
+		&__item {
+			&:first-child{
+				border-top: 1px solid $color-gray;
+			}
+		}
+
+		&__link {
+			height: 30px;
+		}
+
+		&--active{
+			background-color: #FFF;
+		}
+	}
+}

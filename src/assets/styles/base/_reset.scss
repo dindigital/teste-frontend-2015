@@ -1,0 +1,24 @@
+html, body {
+	line-height: 1.4;
+	height: 100%;
+}
+
+body{
+	font-family: $base-font-family;
+	line-height: $base-line-height;
+	// overflow-x: hidden;
+	background-color: $color-light;
+}
+
+a {
+	text-decoration: none;
+	color: $color-dark;
+}
+
+ul {
+	padding-left: 0;
+}
+
+li {
+	list-style-type: none;
+}

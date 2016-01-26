@@ -1,0 +1,145 @@
+/*------------------------------*\
+	General Styles
+\*------------------------------*/
+
+.container {
+	@include clearfix;
+	background: #fff;
+}
+
+.section {
+	padding: 40px;
+	color: darken($color-primary-dark, 10	);
+}
+
+.master-section {
+
+	padding: 12px 0;
+
+	>.section {
+		width: 80%;
+		margin: 0 auto;
+		padding: 15px;
+		box-sizing: border-box;
+	}
+
+	&--muted {
+		background: $color-gray;
+	}
+
+	@extend clearfix;
+}
+
+
+.section {
+	padding: 0;
+	width: 100%;
+	box-sizing: border-box;
+
+	&--testimonials {
+		margin-left: -15px;
+	}
+}
+
+.clearfixed {
+	@extend %clearfix;
+}
+
+.row--centered {
+	margin: 0 auto;
+	width: 80%;
+
+}
+
+.text-muted {
+	font-weight: 700;
+}
+
+.subtitle {
+	text-transform: uppercase;
+	font-size: 15px;
+	margin-bottom: 10px;
+	font-weight: 700;
+
+	color: #000;
+}
+
+.info {
+	font-size: 13px;
+}
+
+#mobile-indicator {
+	display: none;
+}
+
+/* ==================================== *\
+	Media Queries for General Styles
+	#1 - Tablet
+	#2 - Phone Landscape
+	#3 - Phone Portrait
+\* ====================================	*/
+
+
+@include respond-to('tablet') {
+
+	#mobile-indicator {
+		display: block;
+	}
+
+	.site-container{
+		overflow: hidden;
+	}
+	.site-pusher, .site-container{
+		height: 100%;
+	}
+
+	.site-pusher {
+		@include transition-duration(0.3s);
+		@include transform(translateX(0));
+	}
+
+	.with--sidebar {
+		.site-pusher {
+			@include transform(translateX($responsive-menu-width));
+		}
+		.site-cache {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0,0,0,0.6);
+		}
+	}
+
+	.site-content {
+		position: absolute;
+		top: 3.7rem;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		padding-top: 0;
+		overflow-y: scroll;
+	}
+
+	.master-section {
+		>.section {
+			width: 96%;
+		}
+	}
+}
+
+@include respond-to('phone-landscape') {
+	.row--centered {
+		width: auto;
+	}
+	.master-section {
+		padding: 10px 0;
+	}
+}
+
+@include respond-to('phone-portrait') {
+	.section {
+		padding: 15px 4%;
+	}
+}

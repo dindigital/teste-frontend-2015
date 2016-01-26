@@ -1,0 +1,31 @@
+// Mixin for buttons
+@mixin bislite-button-theme($color, $color-text-hover: $color-light) {
+	color: $color;
+	border-color: $color;
+	background-color: transparent;
+
+	&:hover {
+		color: $color-text-hover;
+		background-color: $color;
+	}
+}
+
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media only screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

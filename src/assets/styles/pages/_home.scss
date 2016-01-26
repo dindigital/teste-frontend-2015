@@ -1,0 +1,591 @@
+/* =============================== *\
+   	Home Specific Styles
+   	#Slider
+\* =============================== */
+
+.slider-wrapper {
+	display: block;
+	position: relative;
+	padding: 1.5rem 0 3rem;
+	background-color: $color-primary-light;
+}
+
+.main-slider {
+	margin: 0 auto;
+	width: 80%;
+	border: none;
+
+	.slide {
+		width: 100%;
+		display: block;
+		position: relative;
+
+		&--orange {
+			background-color: $slider-orange;
+		}
+
+		&--red {
+			background-color: $slider-red;
+		}
+
+		&--yellow {
+			background-color: $slider-yellow;
+		}
+
+		&--grey {
+			background-color: $slider-grey;
+		}
+
+		&__text {
+			position: absolute;
+			font-size: 50px;
+			max-width: 300px;
+			top: 50px;
+			left: 50px;
+			line-height: 1.2em;
+
+			color: #fff;
+			font-family: $brand-font-family;
+			font-weight: 700;
+
+			animation: 0.5s bounceOut;
+		}
+
+		img {
+			float: right;
+			width: auto;
+		}
+	}
+}
+
+/* FlexSlider Resets */
+
+.flexslider {
+	.slides {
+		.flex-active-slide{
+			.slide__text{
+				animation: 0.75s bounceIn;
+			}
+		}
+	}
+}
+
+.flex-control-paging {
+	li {
+		a {
+			width: 0.85rem;
+			height: 0.85rem;
+			box-shadow: none;
+			background: rgba(98, 98, 98, 0.4);
+			margin-right: 0.75rem;
+			&.flex-active {
+				background: #fff;
+			}
+		}
+	}
+}
+
+.section {
+	.subtitle {
+		margin: 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+/* =============================== *\
+   	#Features Section
+\* =============================== */
+.section--features {
+	background-color: #e8ebf1;
+}
+
+.feature {
+
+	&__subtitle {
+		display: inline-block;
+		vertical-align: top;
+		line-height: 40px;
+	}
+
+	&__icon{
+		display: inline-block;
+		content: '';
+		width: 45px;
+		height: 40px;
+		background-image: url('../img/icons.png');
+		background-repeat: no-repeat;
+
+		&--pencil {
+			background-position: 0 0;
+		}
+
+		&--responsive {
+			background-position: -45px 0;
+		}
+
+		&--layers {
+			background-position: -90px 0;
+		}
+
+		&--plane {
+			background-position: -135px 0;
+		}
+	}
+	&__info {
+		margin-top: 0;
+	}
+
+	&__link {
+		color: $color-primary;
+		transition: $base-transition;
+
+		font-size: 14px;
+		padding-left: 12px;
+		background: url('../img/arrow_right.png') 0 center no-repeat;
+
+		&:hover {
+			color: darken($color-primary, 10);
+			transition: $base-transition;
+		}
+	}
+}
+
+/* =============================== *\
+   	#Latest Works Section
+\* =============================== */
+.section--latest-works {
+	background: #fff;
+
+	.subtitle {
+		display: inline-block;
+		height: 1.5rem;
+		line-height: 1.5rem;
+		margin: 0 0 20px;
+	}
+}
+
+.section__heading {
+	border-bottom: 1px solid $color-gray;
+	margin-bottom: 20px;
+}
+
+.carousel {
+	width: 100%;
+	padding-bottom: 20px;
+	border-bottom: 1px solid $color-gray;
+	height: 165px;
+	overflow: hidden;
+
+	&__belt {
+		margin-left: 0;
+	}
+
+}
+
+.carousel-controls {
+	float: right;
+}
+
+.control {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url('../img/arrow-icons.png') no-repeat;
+
+	&--prev {
+		margin-right: 10px;
+		background-position: 0 0;
+	}
+
+	&--next {
+		background-position: -25px 0;
+	}
+}
+
+.project {
+	display: inline-block;
+	overflow: hidden;
+	width: 220px;
+	height: 160px;
+	margin-right: 50px;
+	margin-bottom: 20px;
+
+	&__image {
+		width: 100%;
+	}
+
+	&__info {
+		height: 80px;
+		text-align: center;
+		background: $color-primary;
+		position: relative;
+
+		transition: $base-transition;
+	}
+
+	&__button {
+		padding: 0;
+		margin-right: 10px;
+		background: url("../img/project-icons.png") no-repeat;
+		height: 26px;
+
+		&--details {
+			width: 35px;
+			background-position: 0 0;
+		}
+
+		&--link{
+			width: 20px;
+			background-position: -45px 0;
+		}
+	}
+
+	&:hover {
+		.project__info {
+			transform: translateY(-80px);
+			transition: $base-transition;
+		}
+	}
+
+	.buttons-wrapper {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -13px;
+		margin-left: -40px;
+	}
+}
+
+/* =============================== *\
+   	#Testimonials Section
+\* =============================== */
+.section--testimonials {
+	padding-right: 40px;
+
+	.subtitle {
+		display: inline-block;
+	}
+
+	.info, .signature {
+		font-size: 14px;
+		line-height: 1.75em;
+	}
+
+	.signature {
+		display: block;
+		margin-top: 20px;
+	}
+}
+
+.section__icon {
+	display: inline-block;
+	height: 24px;
+	width: 25px;
+	margin-right: 5px;
+	background: url('../img/subtitle-icons.png') no-repeat;
+
+	&--balloon {
+		background-position: -92px 0;
+	}
+
+	&--clients {
+		background-position: 0 0;
+	}
+
+	&--mail {
+		background-position: -31px 0;
+	}
+
+	&--cursor {
+		width: 14px;
+		background-position: -66px 0;
+	}
+}
+
+/* =============================== *\
+   	#Our Clients Section
+\* =============================== */
+.section--our-clients {
+	padding-left: 0px;
+}
+
+.clients-wrapper {
+	margin: 15px 0 0;
+	line-height: 0;
+	@extend %clearfix;
+}
+
+.client {
+	float: left;
+	margin: 0;
+	width: 160px;
+	position: relative;
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		border: 1px solid #eee;
+	}
+}
+
+
+/* =============================== *\
+   	#Download Call-to-action
+\* =============================== */
+.master-call {
+	width: 80%;
+	margin: 30px auto 10px;
+	padding: 10px 20px;
+	line-height: 25px;
+	border: 1px solid $color-primary-light;
+
+	position: relative;
+	box-sizing: border-box;
+	background: $color-gray-line;
+
+	&__text {
+		font-size: 16px;
+		display: inline-block;
+		color: $color-primary-dark;
+	}
+
+	&__button-wrapper {
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	&__button {
+		background: url('../img/download-button.png') 0 0 no-repeat;
+		border: none;
+		display: inline-block;
+		width: 240px;
+		height: 60px;
+		padding: 0;
+		text-indent: 50px;
+		color: #000;
+
+		transition: color 0.15s linear;
+
+		&:hover {
+			background-color: transparent;
+			color: #fff;
+			transition: color 0.15s linear;
+		}
+
+		&-text{
+			line-height: 60px;
+		}
+
+	}
+}
+
+.button-wrapper {
+	display: inline-block;
+	width: 28%;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	text-align: center;
+}
+
+/* ==================================== *\
+		Media Queries for Header
+	#1 - Tablet
+	#2 - Phone Landscape
+	#3 - Phone-portrait
+\* ====================================	*/
+
+@include respond-to('tablet') {
+	.main-slider {
+		width: 90%;
+
+		.slide {
+			&__text {
+				font-size: 2.5rem;
+				margin: 0;
+				left: 1rem;
+				top: 1rem;
+				max-width: 34%;
+			}
+
+			&__image {
+				max-width: 60%;
+			}
+		}
+	}
+
+	.feature {
+		margin-bottom: 20px;
+	}
+
+	.section {
+		&--our-clients{
+
+			padding-left: 0;
+		}
+	}
+
+	.row--centered {
+		width: 96%;
+	}
+
+	.project {
+		margin-right: 10px;
+	}
+
+	.client {
+		width: 32%;
+	}
+
+	.master-call {
+		padding: 10px;
+		width: 96%;
+
+		&__text {
+			padding-left: 0;
+			text-align: center;
+
+			margin-bottom: 0px;
+		}
+
+		&__button-wrapper {
+			margin: 15px auto;
+		}
+	}
+}
+
+@include respond-to('phone-landscape') {
+	.main-slider {
+		.slide {
+			&__text {
+				font-size: 1.75rem;
+			}
+		}
+	}
+
+	.section__heading {
+		margin-bottom: 10px;
+	}
+
+	.carousel {
+		padding-bottom: 10px;
+	}
+
+	.section {
+		margin-bottom: 35px;
+
+		&--testimonials {
+			margin-left: 0;
+			.signature{
+				margin-top: 0;
+			}
+		}
+
+		&--our-clients {
+			margin: auto;
+		}
+
+		&--latest-works {
+
+			margin-top: 20px;
+
+			.subtitle {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.carousel-controls {
+
+	}
+
+	.control {
+		width: 26px;
+		height: 26px;
+		background: url('../img/arrow-icons-mb.png') no-repeat;
+
+		&--prev {
+			margin-right: 15px;
+		}
+
+		&--next {
+			background-position: -28px 0;
+		}
+	}
+
+
+	.client {
+		width: 158px;
+	}
+
+	.master-call {
+		display: none;
+	}
+
+	.info {
+		margin: .5em 0;
+	}
+}
+
+@include respond-to('phone-portrait') {
+	.main-slider {
+		width: 94%;
+
+		.slide {
+			&__text {
+				font-size: 1.2rem;
+
+				left: 0.85rem;
+				top: 0.85rem;
+				max-width: 35%;
+			}
+
+			&__image {
+				max-width: 60%;
+			}
+		}
+	}
+
+	.master-section {
+		padding: .25em 0;
+	}
+
+	.feature {
+		margin-bottom: 24px;
+
+		&__subtitle {
+			font-size: 16px;
+		    margin: .5rem .15rem;
+		}
+
+		&__info {
+			font-size: 14px;
+			text-align: justify;
+			padding: 0 .5rem;
+			box-sizing: border-box;
+			margin: 0 0 5px 0;
+		}
+
+		&__link {
+			font-size: 15px;
+			margin: 0 0 10px 4%;
+		}
+	}
+
+	.section {
+		margin-bottom: .5em;
+		&--testimonials {
+			margin-left: -15px;
+		}
+
+		&--our-clients{
+			padding: 0;
+			margin-left: -15px;
+		}
+	}
+
+	.client {
+		width: 32%;
+	}
+}
