@@ -212,7 +212,7 @@
 	margin-bottom: 20px;
 
 	&__image {
-		max-width: 100%;
+		width: 100%;
 	}
 
 	&__info {
@@ -426,12 +426,21 @@
 		}
 	}
 
+	.row--centered {
+		width: 96%;
+	}
+
+	.project {
+		margin-right: 10px;
+	}
+
 	.client {
 		width: 32%;
 	}
 
 	.master-call {
 		padding: 10px;
+		width: 96%;
 
 		&__text {
 			padding-left: 0;
@@ -455,19 +464,56 @@
 		}
 	}
 
+	.section__heading {
+		margin-bottom: 10px;
+	}
+
+	.carousel {
+		padding-bottom: 10px;
+	}
+
 	.section {
 		margin-bottom: 35px;
 
 		&--testimonials {
+			margin-left: 0;
 			.signature{
 				margin-top: 0;
 			}
 		}
 
 		&--our-clients {
-			margin-left: -30px;
+			margin: auto;
+		}
+
+		&--latest-works {
+
+			margin-top: 20px;
+
+			.subtitle {
+				margin-bottom: 10px;
+			}
 		}
 	}
+
+	.carousel-controls {
+
+	}
+
+	.control {
+		width: 26px;
+		height: 26px;
+		background: url('../img/arrow-icons-mb.png') no-repeat;
+
+		&--prev {
+			margin-right: 15px;
+		}
+
+		&--next {
+			background-position: -28px 0;
+		}
+	}
+
 
 	.client {
 		width: 158px;
@@ -477,6 +523,9 @@
 		display: none;
 	}
 
+	.info {
+		margin: .5em 0;
+	}
 }
 
 @include respond-to('phone-portrait') {
@@ -527,11 +576,12 @@
 	.section {
 		margin-bottom: .5em;
 		&--testimonials {
-
+			margin-left: -15px;
 		}
 
 		&--our-clients{
 			padding: 0;
+			margin-left: -15px;
 		}
 	}
 

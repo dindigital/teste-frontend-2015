@@ -8,7 +8,6 @@ var gulp         = require('gulp'),
     jshint       = require('gulp-jshint'),
     concatCss    = require('gulp-concat-css'),
     autoprefixer = require('gulp-autoprefixer'),
-    minifyCss    = require('gulp-minify-css'),
     sass         = require('gulp-sass'),
     compass      = require('compass-importer'),
     rename       = require('gulp-rename'),
@@ -57,7 +56,7 @@ gulp.task( 'scripts', function() {
 gulp.task( 'styles', function() {
     gulp.src( config.src.styles )
         /*.pipe(sourcemaps.init())*/
-            .pipe(sass().on('error', sass.logError))
+            .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         /*.pipe(sourcemaps.write(config.dest.maps))*/
         /*.pipe(autoprefixer({ browsers: ['last 3 versions'] }))*/
         .pipe(gulp.dest(config.dest.css))

@@ -130,11 +130,16 @@
 }
 
 @include respond-to('phone-landscape') {
-
+	.row--centered {
+		width: auto;
+	}
+	.master-section {
+		padding: 10px 0;
+	}
 }
 
 @include respond-to('phone-portrait') {
 	.section {
-		padding: 40px 4%;
+		padding: 15px 4%;
 	}
 }
