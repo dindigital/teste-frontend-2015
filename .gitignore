@@ -1,1 +1,26 @@
+# Apple Files #
+###################
 .DS_Store
+_MACOSX/
+
+# Sass Cache #
+###################
+.sass-cache/
+
+# Node Modules #
+###################
+node_modules/
+
+# Wordpress Files #
+###################
+.htaccess
+wp-config.php
+cache/
+
+# General Files #
+###################
+.ftpsync_settings
+.orig
+backup/
+deploy/
+files/

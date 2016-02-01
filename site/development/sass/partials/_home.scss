@@ -1,0 +1,85 @@
+.page-home {
+    .carrossel {
+        background: $Spray;
+        padding-top: 20px;
+
+        .owl-carousel {
+            .item {
+                margin: 3px;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .owl-controls {
+                width: 100%;
+                display: block;
+                text-align: center;
+
+                .owl-pagination {
+                    width: inherit;
+
+                    .owl-page {
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 12px;
+                        height: 12px;
+                        background: rgba($Black, 0.2);
+                        margin: 12px 8px;
+
+                        @include border-radius(50%);
+                        @include transition-duration(700ms);
+
+                        &.active {
+                            background: $White;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .servicos {
+        background: $AthensGray;
+        padding: 60px 0;
+
+        h2 {
+            font-size: 15px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+            i.fa {
+                background: $Scooter;
+                color: $White;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 50px;
+                margin-right: 20px;
+                @include border-radius(50%);
+
+            }
+        }
+
+        p, span {
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        span {
+            color: $Scooter;
+            padding-top: 30px;
+            display: block;
+
+            strong {
+                color: $Black;
+                margin-right: 10px;
+            }
+        }
+    }
+}
