@@ -1,0 +1,13 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+<Leandro Nunes> -- <Coordenador de Desenvolvimento> -- <http://gnublue.com>
+
+# COMPANY
+<GNU|BLUE>
+
+# TECHNOLOGY COLOPHON
+Gulp
+HTML5, CSS3
+jQuery

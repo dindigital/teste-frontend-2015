@@ -1,0 +1,18 @@
+//Bootstrap
+@import 'partials/bootstrap/bootstrap.scss';
+@import 'partials/bootstrap/bootstrap.theme.scss';
+
+//Plugins
+@import 'partials/plugins/page.loader.scss';
+@import 'partials/plugins/animate.scss';
+@import 'partials/plugins/font.awesome';
+@import 'partials/plugins/awesome.bootstrap.checkbox';
+@import 'partials/plugins/owl.carousel';
+
+//Desenvolvimento
+@import 'partials/variables';
+@import 'partials/global';
+@import 'partials/home';
+
+//Medias Queries
+@import 'partials/queries';

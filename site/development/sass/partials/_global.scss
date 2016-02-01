@@ -1,0 +1,249 @@
+//Reset
+* {
+    outline: 0 !important;
+    text-decoration: none !important;
+    @include box-shadow(none !important);
+    @include text-shadow(none !important);
+
+    &:focus, &:hover {
+        outline: 0 !important;
+        text-decoration: none !important;
+        @include box-shadow(none !important);
+        @include text-shadow(none !important);
+    }
+}
+
+body {
+    font-family: 'Arial', Helvetica, sans-serif;
+    font-size: 14px;
+    //-webkit-font-smoothing: antialiased !important;
+
+    .container {
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .page-loader {
+        opacity: 0.9;
+
+        img, .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 70px;
+            height: 70px;
+            margin-top: -(70px/2);
+            margin-left: -(70px/2);
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            margin-top: -(50px/2);
+            margin-left: -(50px/2);
+            @include animation(loader, 0s, normal, 5s, forwards, infinite, running, linear);
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+    @include text-shadow(none !important);
+}
+
+.img-responsive {
+    margin: 0 auto;
+}
+
+/* =============== * =============== */
+
+//Background 100% da tela
+.background-image-full {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* =============== * =============== */
+
+//Texto centralizado na vertical
+.content-wrapper-vertical-align {
+    position: relative;
+
+    .content-wrapper-inner-vertical-align {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        @include transform(translateY(-50%));
+    }
+}
+
+/* =============== * =============== */
+
+//Efeito de parallax
+.parallax {
+    background-attachment: fixed !important;
+}
+
+/* =============== * =============== */
+
+//Pontuação por estrelas
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+
+    > span {
+        display: inline-block;
+        position: relative;
+        width: 1.1em;
+
+        &::before {
+            content: "\2605";
+            position: absolute;
+            color: yellow;
+        }
+
+        &:hover::before,
+        &:hover ~ span::before {
+            content: "\2605";
+            position: absolute;
+            color: yellow;
+        }
+    }
+}
+
+/* =============== * =============== */
+
+//Header
+.navbar-default {
+    min-height: 120px;
+    border: 0 none;
+    margin: 0;
+    background: $AthensGray;
+
+    @include transition-duration(700ms);
+
+    h1 {
+        display: inline-block;
+
+        .navbar-brand, .navbar-brand:focus, .navbar-brand:hover {
+            font-family: 'Lato', sans-serif;
+            font-size: 50px;
+            font-weight: 300;
+            color: $Scooter;
+            padding: 0 15px;
+            height: inherit;
+            line-height: 120px;
+
+            @include transition-duration(700ms);
+
+            strong {
+                color: $Black;
+            }
+        }
+    }
+
+    .navbar-right {
+        height: inherit;
+
+        @include transition-duration(700ms);
+
+        > li {
+            > a {
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 13px;
+                color: $Black;
+                margin: 37px 10px;
+
+                @include transition-duration(700ms);
+
+                &:focus, &:hover {
+                    color: $Scooter;
+                }
+            }
+
+            &:first-child {
+                > a {
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+            }
+
+            &:last-child {
+                > a {
+                    padding-right: 0;
+                    margin-right: 0;
+                }
+            }
+
+            &.dropdown {
+                > a, > a:focus, > a:hover {
+                    &::before {
+                        display: block;
+                        content: '';
+                        background: transparent;
+                        width: 100%;
+                        height: 5px;
+                        position: absolute;
+                        top: -5px;
+                        left: 0;
+
+                        @include transition-duration(700ms);
+                    }
+                }
+
+                >.dropdown-menu {
+                    top: 87px;
+                    right: auto;
+                    left: 10px;
+                    border: 0 none;
+
+                    > li {
+                        > a {
+                            padding: 0 12px 10px;
+                            margin: 10px;
+                            border-bottom: 1px solid $AthensGray;
+
+                            &:focus, &:hover {
+                                color: $Scooter;
+                                background: none;
+                            }
+                        }
+
+                        &:last-child {
+                            > a, > a:focus, > a:hover {
+                                border: 0 none;
+                            }
+                        }
+                    }
+
+                    &::after {
+                        display: block;
+                        content: '';
+                        background: $Scooter;
+                        width: 100%;
+                        height: 5px;
+                        position: absolute;
+                        bottom: 5px;
+                        left: 0;
+                    }
+                }
+
+                &.open {
+                    > a {
+                        color: $Scooter;
+                        position: relative;
+                        background: $White;
+
+                        &::before {
+                            background: $Scooter;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* =============== * =============== */

@@ -1,0 +1,149 @@
+//Fontes
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+//@font-face {
+//font-family: GothamLight;
+//src: url(fonts/Gotham-Light.otf);
+//}
+
+//Cores
+$White: #FFFFFF;
+$Black: #000000;
+$Scooter: #2AACC8;
+$AthensGray: #E8EBF1;
+$Spray: #81E4ED;
+
+//Mixin's
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -o-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+}
+
+@mixin transition-delay($transition-delay) {
+    -webkit-transition-delay: $transition-delay;
+    -moz-transition-delay: $transition-delay;
+    -o-transition-delay: $transition-delay;
+    -ms-transition-delay: $transition-delay;
+    transition-delay: $transition-delay;
+}
+
+@mixin transition-duration($transition-duration) {
+    -webkit-transition-duration: $transition-duration;
+    -moz-transition-duration: $transition-duration;
+    -o-transition-duration: $transition-duration;
+    -ms-transition-duration: $transition-duration;
+    transition-duration: $transition-duration;
+}
+
+@mixin border-radius($border-radius) {
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    border-radius: $border-radius;
+}
+
+@mixin box-shadow($box-shadow) {
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    -o-box-shadow: $box-shadow;
+    -ms-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
+}
+
+@mixin text-shadow($text-shadow) {
+    -webkit-text-shadow: $text-shadow;
+    -moz-text-shadow: $text-shadow;
+    -o-text-shadow: $text-shadow;
+    -ms-text-shadow: $text-shadow;
+    text-shadow: $text-shadow;
+}
+
+@mixin filter($filter) {
+    -webkit-filter: $filter;
+    -moz-filter: $filter;
+    -o-filter: $filter;
+    -ms-filter: $filter;
+    filter: $filter;
+}
+
+@mixin animation($animation, $delay, $direction, $duration, $fill-mode, $iteration-count, $play-state, $timing-function) {
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -o-animation: $animation;
+    -ms-animation: $animation;
+    animation: $animation;
+
+    -webkit-animation-delay: $delay;
+    -moz-animation-delay: $delay;
+    -o-animation-delay: $delay;
+    -ms-animation-delay: $delay;
+    animation-delay: $delay;
+
+    -webkit-animation-direction: $direction;
+    -moz-animation-direction: $direction;
+    -o-animation-direction: $direction;
+    -ms-animation-direction: $direction;
+    animation-direction: $direction;
+
+    -webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    -o-animation-duration: $duration;
+    -ms-animation-duration: $duration;
+    animation-duration: $duration;
+
+    -webkit-animation-fill-mode: $fill-mode;
+    -moz-animation-fill-mode: $fill-mode;
+    -o-animation-fill-mode: $fill-mode;
+    -ms-animation-fill-mode: $fill-mode;
+    animation-fill-mode: $fill-mode;
+
+    -webkit-animation-iteration-count: $iteration-count;
+    -moz-animation-iteration-count: $iteration-count;
+    -o-animation-iteration-count: $iteration-count;
+    -ms-animation-iteration-count: $iteration-count;
+    animation-iteration-count: $iteration-count;
+
+    -webkit-animation-play-state: $play-state;
+    -moz-animation-play-state: $play-state;
+    -o-animation-play-state: $play-state;
+    -ms-animation-play-state: $play-state;
+    animation-play-state: $play-state;
+
+    -webkit-animation-timing-function: $timing-function;
+    -moz-animation-timing-function: $timing-function;
+    -o-animation-timing-function: $timing-function;
+    -ms-animation-timing-function: $timing-function;
+    animation-timing-function: $timing-function;
+}
+
+//Mixin's Keyframe
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {@content;}
+    @-moz-keyframes    #{$name} {@content;}
+    @-ms-keyframes     #{$name} {@content;}
+    @keyframes         #{$name} {@content;}
+}
+
+@include keyframes(vibracall) {
+    from { @include transform(rotate(-10deg));}
+    to   { @include transform(rotate(10deg));}
+}
+
+@include keyframes(rotate360) {
+    from { @include transform(rotate(0deg));}
+    to   { @include transform(rotate(360deg));}
+}
+
+@include keyframes(rotate-inverse360) {
+    from { @include transform(rotate(0deg));}
+    to   { @include transform(rotate(-360deg));}
+}
+
+@include keyframes(loader) {
+    0%, 100% { opacity: 0.5;}
+    50% { opacity: 1;}
+}
